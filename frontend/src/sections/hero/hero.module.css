@@ -1,0 +1,46 @@
+.heroContainer {
+  height: 100vh;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.5rem;
+}
+
+img {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 15%;
+  object-fit: cover;
+  border: 6px solid var(--text-secondary);
+}
+
+img:hover {
+  border: 6px solid var(--primary);
+}
+
+.introContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 45rem;
+  padding: 2rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.title {
+  text-align: center;
+}
+
+.content {
+  font-size: larger;
+}
+
+span {
+  color: var(--text-primary);
+  background-color: var(--secondary);
+  padding: 0.25rem;
+  font-weight: 500;
+}
