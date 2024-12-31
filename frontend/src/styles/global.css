@@ -2,8 +2,8 @@
 
 :root {
   /* Colour */
-  --primary: #42468c;
-  --primary-hover: rgba(66, 70, 140, 0.9);
+  --primary: rgba(12, 74, 110);
+  --primary-hover: rgba(12, 74, 110, 0.9);
   --secondary: #8c4246;
   --secondary-hover: rgba(140, 66, 70, 0.9);
   --tertiary: #468c42;
