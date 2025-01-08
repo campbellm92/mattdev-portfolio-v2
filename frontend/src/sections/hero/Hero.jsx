@@ -1,10 +1,11 @@
 import styles from "./hero.module.css";
+import { Button } from "mallee-ui";
 
 export default function Hero() {
   return (
     <div className={styles.heroContainer}>
       <div className={styles.imgContainer}>
-        <img src="../matt.jpg" alt="Me" />
+        <img className={styles.profileImage} src="../matt.jpg" alt="Me" />
       </div>
       <div className={styles.introContainer}>
         <h1 className={styles.title}>Ciao!</h1>
