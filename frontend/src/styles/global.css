@@ -4,10 +4,10 @@
   /* Colour */
   --primary: rgba(12, 74, 110);
   --primary-hover: rgba(12, 74, 110, 0.9);
-  --secondary: #8c4246;
-  --secondary-hover: rgba(140, 66, 70, 0.9);
-  --tertiary: #468c42;
-  --tertiary-hover: rgba(70, 140, 66, 0.9);
+  --secondary: rgba(225, 29, 72);
+  --secondary-hover: rgba(225, 29, 72, 0.9);
+  --tertiary: rgba(5, 150, 105);
+  --tertiary-hover: rgba(5, 150, 105, 0.9);
   /* tailwind neutral 200 */
   --neutral: rgb(229, 229, 229);
   --neutral-hover: rgb(229, 229, 229, 0.9);
