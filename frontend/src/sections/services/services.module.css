@@ -1,0 +1,9 @@
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.header {
+  color: var(--text-primary);
+}
