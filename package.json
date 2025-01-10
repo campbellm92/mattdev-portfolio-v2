@@ -7,10 +7,13 @@
     "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "engines": {
-    "node": ">=20.x",
-    "npm": ">=10.x"
+    "node": "20.x",
+    "npm": "10.x"
   },
   "author": "Matthew Campbell",
   "license": "ISC",
-  "description": "Portfolio website"
+  "description": "Portfolio website",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
