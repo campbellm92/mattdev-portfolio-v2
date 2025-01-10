@@ -1,8 +1,7 @@
-html {
-  background-color: var(--bg-light);
-}
-
 .heroContainer {
+  /* width: 100vw; */
+  height: auto;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,11 +9,17 @@ html {
 }
 
 .projectsContainer {
-  height: 75vh;
-  background-color: var(--bg-dark);
+  /* width: 100vw; */
+  height: auto;
+  background-color: var(--background-dark);
 }
 
 .skillsContainer {
+  /* width: 100vw; */
   display: flex;
   align-items: center;
+}
+
+.servicesContainer {
+  height: auto;
 }
