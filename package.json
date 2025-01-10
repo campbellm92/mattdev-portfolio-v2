@@ -6,7 +6,11 @@
     "start": "node backend/index.js",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
-  "author": "",
+  "engines": {
+    "node": ">=20.x",
+    "npm": ">=10.x"
+  },
+  "author": "Matthew Campbell",
   "license": "ISC",
-  "description": ""
+  "description": "Portfolio website"
 }
