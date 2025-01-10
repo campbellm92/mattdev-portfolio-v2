@@ -1,0 +1,47 @@
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.header {
+  color: var(--text-secondary);
+}
+
+.cardGridWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: auto;
+}
+
+.cardGrid {
+  display: grid;
+  width: 100%;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  padding: 0 4rem 4rem 4rem;
+}
+
+@media (min-width: 600px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .cardGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  width: 100%;
+  padding-top: 1rem;
+}
