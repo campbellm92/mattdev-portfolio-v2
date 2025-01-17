@@ -8,13 +8,13 @@
   color: var(--text-secondary);
 }
 
-.cardGridWrapper {
+/* .cardGridWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   height: auto;
-}
+} */
 
 .cardGrid {
   display: grid;
