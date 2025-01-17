@@ -4,6 +4,7 @@ import Hero from "../../sections/hero/Hero";
 import Projects from "../../sections/projects/Projects";
 import Skills from "../../sections/skills/Skills";
 import Services from "../../sections/services/Services";
+import Contact from "../../sections/contact/Contact";
 
 export default function Home() {
   return (
@@ -20,6 +21,9 @@ export default function Home() {
       </div>
       <div className={styles.servicesContainer}>
         <Services />
+      </div>
+      <div className={styles.contactContainer}>
+        <Contact />
       </div>
     </>
   );
