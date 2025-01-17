@@ -38,7 +38,7 @@
   font-size: larger;
 }
 
-span {
+.heroSpan {
   color: var(--text-secondary);
   background-color: var(--secondary);
   padding: 0.25rem;
