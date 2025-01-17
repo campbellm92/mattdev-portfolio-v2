@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <div className={styles.heroContainer}>
       <div className={styles.imgContainer}>
-        <img className={styles.profileImage} src="../matt.jpg" alt="Me" />
+        <img className={styles.profileImage} src="../matt.webp" alt="Me" />
       </div>
       <div className={styles.introContainer}>
         <h1 className={styles.title}>Ciao!</h1>
