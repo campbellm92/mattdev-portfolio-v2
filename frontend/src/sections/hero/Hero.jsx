@@ -10,15 +10,18 @@ export default function Hero() {
       <div className={styles.introContainer}>
         <h1 className={styles.title}>Ciao!</h1>
         <p className={styles.content}>
-          Mi chiamo Matt. Sono uno <span>Sviluppatore Fullstack</span>
-          dall'Australia 🦘 con sede ad <span>Asti, Italia</span>. Amo
+          Mi chiamo Matt. Sono uno{" "}
+          <span className={styles.heroSpan}>Sviluppatore Fullstack</span>
+          dall'Australia 🦘 con sede ad{" "}
+          <span className={styles.heroSpan}>Asti, Italia</span>. Amo
           l'architettura a componenti frontend e sono appassionato di design e
           sviluppo di componenti UI. Il mio sogno è lavorare nel settore
           dell'e-learning come sviluppatore.
         </p>
         <p className={styles.content}>
           L'italiano non è la mia ligua madre, ma sto imparando. Altrimenti
-          parlo <span>inglese</span> e <span>tedesco</span>.
+          parlo <span className={styles.heroSpan}>inglese</span> e{" "}
+          <span className={styles.heroSpan}>tedesco</span>.
         </p>
       </div>
     </div>
