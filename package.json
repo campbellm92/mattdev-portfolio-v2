@@ -4,7 +4,7 @@
   "main": "backend/index.js",
   "scripts": {
     "start": "node backend/index.js",
-    "build": "cd frontend && npm install && npm run build"
+    "build": "npm install && cd frontend && npm install && npm run build"
   },
   "engines": {
     "node": "20.x",
@@ -13,5 +13,10 @@
   "author": "Matthew Campbell",
   "license": "ISC",
   "description": "Portfolio website",
-  "dependencies": {}
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodemailer": "^6.9.16"
+  }
 }
