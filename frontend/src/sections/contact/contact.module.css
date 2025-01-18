@@ -1,7 +1,63 @@
-.contactFormContainer {
+/* Contact.jsx */
+.contactSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .contactSection {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 2rem;
+    padding: 2rem;
+  }
+}
+
+.contactFormCol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Details Column */
+.detailsCol {
   display: flex;
   flex-direction: column;
-  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 18.75rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.detail:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
+.detail span {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--primary);
+}
+
+/* ContactForm.jsx */
+.contactFormContainer {
+  width: 100%;
+  max-width: 400px;
   height: auto;
   border: 3px solid var(--primary);
   padding: 2rem;
