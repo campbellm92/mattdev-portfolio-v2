@@ -1,5 +1,12 @@
 .heroContainer {
+  /* width: 100vw; */
   height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 .imgContainer {
