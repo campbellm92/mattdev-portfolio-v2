@@ -6,15 +6,6 @@
   height: 100vh;
 }
 
-@media (max-width: 768px) {
-  .contactSection {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    gap: 2rem;
-    padding: 2rem;
-  }
-}
-
 .contactFormCol {
   display: flex;
   align-items: center;
@@ -57,7 +48,7 @@
 /* ContactForm.jsx */
 .contactFormContainer {
   width: 100%;
-  max-width: 400px;
+  max-width: 25rem;
   height: auto;
   border: 3px solid var(--primary);
   padding: 2rem;
@@ -80,6 +71,22 @@
   justify-content: flex-end;
   color: var(--success);
   font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .contactSection {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactSection {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 2rem;
+    padding: 2rem;
+  }
 }
 
 @media (max-width: 480px) {
