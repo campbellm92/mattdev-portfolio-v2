@@ -31,7 +31,7 @@ export default function Services() {
             </Button>
           </div>
         </Card>
-        <Card color="secondary" enableHoverEffect={false}>
+        <Card enableHoverEffect={false}>
           <Card.Title>Servizi Frontend</Card.Title>
           <Card.Content>
             <p>
