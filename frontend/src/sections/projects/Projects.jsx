@@ -4,7 +4,7 @@ import { Card, Badge } from "mallee-ui";
 
 export default function Projects() {
   return (
-    <>
+    <div className={styles.projectsContainer}>
       <div className={styles.headerContainer}>
         <h1 className={styles.header}>Progetti</h1>
       </div>
@@ -34,6 +34,6 @@ export default function Projects() {
         ))}
       </div>
       {/* </div> */}
-    </>
+    </div>
   );
 }
