@@ -1,5 +1,5 @@
 .servicesContainer {
-  min-height: 100vh;
+  min-height: 75vh;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -37,7 +37,7 @@
 
 @media (min-width: 900px) {
   .cardGrid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
