@@ -18,55 +18,64 @@ export default function Services() {
             <p>Progettazione, codifica e manutenzione.</p>
           </Card.Content>
           <div className={styles.btnContainer}>
-            <Button variant="filled" color="neutral">
+            <Button
+              variant="filled"
+              color="neutral"
+              onClick={() =>
+                document
+                  .getElementById("contactSection")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
               Contattami
             </Button>
           </div>
         </Card>
         <Card color="secondary" enableHoverEffect={false}>
-          <Card.Title>Service</Card.Title>
+          <Card.Title>Servizi Frontend</Card.Title>
           <Card.Content>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis
-              non facilis voluptatem in
+              Sistemi di design scalabili che includono UI unica e
+              personalizzata, ottimizzazione della performance, accessibilità e
+              più.
             </p>
           </Card.Content>
           <div className={styles.btnContainer}>
-            <Button variant="filled" color="neutral">
+            <Button
+              variant="filled"
+              color="neutral"
+              onClick={() =>
+                document
+                  .getElementById("contactSection")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
               Contattami
             </Button>
           </div>
         </Card>{" "}
         <Card enableHoverEffect={false}>
-          <Card.Title>Service Service Service Service</Card.Title>
+          <Card.Title>Servizi Fullstack</Card.Title>
           <Card.Content>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis
-              non facilis voluptatem in
+              Sviluppo delle API, gestione del database, applicazioni web
+              personalizzate e più.
             </p>
           </Card.Content>
           <div className={styles.btnContainer}>
-            <Button variant="filled" color="neutral">
+            <Button
+              variant="filled"
+              color="neutral"
+              onClick={() =>
+                document
+                  .getElementById("contactSection")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
               Contattami
             </Button>
           </div>
         </Card>{" "}
-        <Card enableHoverEffect={false} color="tertiary">
-          <Card.Title>Service</Card.Title>
-          <Card.Content>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis
-              non facilis voluptatem in possimus aspernatur deleniti repellendus
-              ipsa quasi. Tempore quis quae veritatis facere amet possimus
-              impedit temporibus dicta consequuntur?
-            </p>
-          </Card.Content>
-          <div className={styles.btnContainer}>
-            <Button variant="filled" color="neutral">
-              Contattami
-            </Button>
-          </div>
-        </Card>
       </div>
     </div>
   );
