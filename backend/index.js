@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname, "../frontend/dist")));
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:5173" || process.env.DEPLOYED_URL,
+    origin: ["http://localhost:5173", "https://www.mattdev.it/"],
   })
 );
 
