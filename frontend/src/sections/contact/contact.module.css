@@ -70,8 +70,20 @@
   color: var(--text-primary);
 }
 
-.successSpan {
+.btnContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.successMsg {
+  display: flex;
+  justify-content: flex-end;
   color: var(--success);
-  padding-top: 1rem;
   font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .contactFormContainer {
+    width: 90%;
+  }
 }
