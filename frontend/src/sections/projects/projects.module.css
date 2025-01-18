@@ -1,4 +1,5 @@
 .projectsContainer {
+  width: 100vw;
   height: auto;
   background-color: var(--background-dark);
 }
@@ -29,6 +30,16 @@
   padding: 0 4rem 4rem 4rem;
 }
 
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  width: 100%;
+  padding-top: 1rem;
+}
+
 @media (min-width: 600px) {
   .cardGrid {
     grid-template-columns: repeat(2, 1fr);
@@ -41,12 +52,11 @@
   }
 }
 
-.badges {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.25rem;
-  width: 100%;
-  padding-top: 1rem;
+@media (max-width: 480px) {
+  .cardGrid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
