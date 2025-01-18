@@ -103,13 +103,14 @@ export default function ContactForm() {
           errorMessage={messageError || undefined}
           placeholder="Scrivi un messaggio"
         />
-        <Button size="large" type="submit">
-          Inviare
-        </Button>
+        <div className={styles.btnContainer}>
+          <Button size="large" type="submit">
+            Inviare
+          </Button>
+        </div>
+
         {success && (
-          <span className={styles.successSpan}>
-            Messaggio inviato con successo!
-          </span>
+          <p className={styles.successMsg}>Messaggio inviato con successo!</p>
         )}
       </form>
     </div>
