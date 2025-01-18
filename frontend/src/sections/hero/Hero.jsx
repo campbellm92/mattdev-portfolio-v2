@@ -12,10 +12,14 @@ export default function Hero() {
         <p className={styles.content}>
           Mi chiamo Matt. Sono uno{" "}
           <span className={styles.heroSpan}>Sviluppatore Fullstack</span>
-          dall'Australia 🦘 con sede ad{" "}
-          <span className={styles.heroSpan}>Asti, Italia</span>. Amo
-          l'architettura a componenti frontend e sono appassionato di design e
-          sviluppo di componenti UI. Il mio sogno è lavorare nel settore
+          neolaureato dall'Australia 🦘 con sede ad{" "}
+          <span className={styles.heroSpan}>Asti, Italia</span>. Lavoravo come
+          insegnante di inglese, ma ho scoperto una passione per lo sviluppo web
+          e ho voluto affrontare una nuova sfida.
+        </p>
+        <p className={styles.content}>
+          Amo l'architettura a componenti frontend e sono appassionato di design
+          e sviluppo di componenti UI. Il mio sogno è lavorare nel settore
           dell'e-learning come sviluppatore.
         </p>
         <p className={styles.content}>
