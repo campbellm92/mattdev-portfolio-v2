@@ -17,9 +17,11 @@ export default function Services() {
           <Card.Content>
             <p>Progettazione, codifica e manutenzione.</p>
           </Card.Content>
-          <Button variant="filled" color="neutral">
-            Contattami
-          </Button>
+          <div className={styles.btnContainer}>
+            <Button variant="filled" color="neutral">
+              Contattami
+            </Button>
+          </div>
         </Card>
         <Card color="secondary" enableHoverEffect={false}>
           <Card.Title>Service</Card.Title>
@@ -29,11 +31,13 @@ export default function Services() {
               non facilis voluptatem in
             </p>
           </Card.Content>
-          <Button variant="filled" color="neutral">
-            Contattami
-          </Button>
+          <div className={styles.btnContainer}>
+            <Button variant="filled" color="neutral">
+              Contattami
+            </Button>
+          </div>
         </Card>{" "}
-        <Card color="tertiary" enableHoverEffect={false}>
+        <Card enableHoverEffect={false}>
           <Card.Title>Service Service Service Service</Card.Title>
           <Card.Content>
             <p>
@@ -41,11 +45,13 @@ export default function Services() {
               non facilis voluptatem in
             </p>
           </Card.Content>
-          <Button variant="filled" color="neutral">
-            Contattami
-          </Button>
+          <div className={styles.btnContainer}>
+            <Button variant="filled" color="neutral">
+              Contattami
+            </Button>
+          </div>
         </Card>{" "}
-        <Card enableHoverEffect={false}>
+        <Card enableHoverEffect={false} color="tertiary">
           <Card.Title>Service</Card.Title>
           <Card.Content>
             <p>
@@ -55,9 +61,11 @@ export default function Services() {
               impedit temporibus dicta consequuntur?
             </p>
           </Card.Content>
-          <Button variant="filled" color="neutral">
-            Contattami
-          </Button>
+          <div className={styles.btnContainer}>
+            <Button variant="filled" color="neutral">
+              Contattami
+            </Button>
+          </div>
         </Card>
       </div>
     </div>
