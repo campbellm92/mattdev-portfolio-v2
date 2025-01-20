@@ -45,6 +45,14 @@
   color: var(--primary);
 }
 
+.detail svg {
+  flex-shrink: 0;
+}
+
+.buffer {
+  padding: 0 0 0.05rem 0;
+}
+
 /* ContactForm.jsx */
 .contactFormContainer {
   width: 100%;
@@ -91,6 +99,6 @@
 
 @media (max-width: 480px) {
   .contactFormContainer {
-    width: 90%;
+    width: 95%;
   }
 }

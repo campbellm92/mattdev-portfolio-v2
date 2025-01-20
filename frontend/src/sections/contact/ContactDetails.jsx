@@ -1,17 +1,20 @@
 import styles from "./contact.module.css";
-import { FaEnvelope, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { HiMail } from "react-icons/hi";
 
 export default function ContactDetails() {
   return (
     <div className={styles.detailsCol}>
       <a href="mailto:info@mattdev.it" className={styles.detail}>
         {/* email */}
-        <FaEnvelope size={60} />
+        <HiMail size={60} />
+        <div className={styles.buffer}></div>
         <span>info@mattdev.it</span>
       </a>
       <a href="https://github.com/campbellm92" className={styles.detail}>
         {/* github */}
         <FaGithub size={60} />
+        <div className={styles.buffer}></div>
         <span>GitHub</span>
       </a>
       <a
@@ -19,7 +22,8 @@ export default function ContactDetails() {
         className={styles.detail}
       >
         {/* linkedin */}
-        <FaLinkedinIn size={60} />
+        <FaLinkedin size={60} />
+        <div className={styles.buffer}></div>
         <span>LinkedIn</span>
       </a>
     </div>
