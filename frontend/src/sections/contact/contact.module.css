@@ -4,6 +4,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   height: 100vh;
+  margin-top: 4rem;
 }
 
 .contactFormCol {
