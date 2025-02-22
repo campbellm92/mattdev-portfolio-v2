@@ -1,5 +1,4 @@
 import styles from "./hero.module.css";
-import { Button } from "mallee-ui";
 
 export default function Hero() {
   return (
@@ -11,8 +10,8 @@ export default function Hero() {
         <h1 className={styles.title}>Ciao!</h1>
         <p className={styles.content}>
           Mi chiamo Matt. Sono uno{" "}
-          <span className={styles.heroSpan}>Sviluppatore Fullstack</span>
-          neolaureato dall'Australia 🦘 con sede ad{" "}
+          <span className={styles.heroSpan}>Sviluppatore Fullstack</span>{" "}
+           neolaureato dall'Australia 🦘 con sede ad{" "}
           <span className={styles.heroSpan}>Asti, Italia</span>. Lavoravo come
           insegnante di inglese, ma ho scoperto una passione per lo sviluppo web
           e ho voluto affrontare una nuova sfida.
