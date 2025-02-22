@@ -6,7 +6,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
 }
 
 .imgContainer {
@@ -31,7 +30,7 @@
 .introContainer {
   display: flex;
   flex-direction: column;
-  max-width: 45rem;
+  max-width: 60rem;
   padding: 2rem;
   color: var(--text-primary);
   line-height: 1.8;
@@ -46,8 +45,8 @@
 }
 
 .heroSpan {
-  color: var(--text-secondary);
-  background-color: var(--secondary);
-  padding: 0.25rem;
-  font-weight: 500;
+  text-decoration-line: underline;
+  text-decoration-style: double;
+  text-decoration-color: var(--primary);
+  font-weight: 600;
 }
