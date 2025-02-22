@@ -1,28 +1,30 @@
-import styles from "./home.module.css";
 import { Navbar } from "mallee-ui";
 import Hero from "../../sections/hero/Hero";
 import Projects from "../../sections/projects/Projects";
-import Skills from "../../sections/skills/Skills";
-import Services from "../../sections/services/Services";
+// import Skills from "../../sections/skills/Skills";
+// import Services from "../../sections/services/Services";
 import Contact from "../../sections/contact/Contact";
+// import { FaMoon } from "react-icons/fa";
 
 export default function Home() {
   return (
     <>
-      <Navbar variant="with-branding-sticky-fade" logo="MATTHEW CAMPBELL" />
-      <div className={styles.heroContainer}>
+      <Navbar variant="with-branding-sticky-fade" logo="MATTHEW CAMPBELL"/>
+      <div>
         <Hero />
       </div>
-      <div className={styles.projectsContainer}>
+      <hr />
+      <div>
         <Projects />
       </div>
-      <div className={styles.skillsContainer}>
+      <hr />
+      {/* <div className={styles.skillsContainer}>
         <Skills />
-      </div>
-      <div className={styles.servicesContainer}>
+      </div> */}
+      {/* <div className={styles.servicesContainer}>
         <Services />
-      </div>
-      <div className={styles.contactContainer}>
+      </div> */}
+      <div>
         <Contact />
       </div>
     </>
