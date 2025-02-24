@@ -7,13 +7,13 @@ export default function ContactDetails() {
     <div className={styles.detailsCol}>
       <a href="mailto:info@mattdev.it" className={styles.detail}>
         {/* email */}
-        <HiMail size={60} />
+        <HiMail className={styles.HiMail} />
         <div className={styles.buffer}></div>
         <span>info@mattdev.it</span>
       </a>
       <a href="https://github.com/campbellm92" className={styles.detail}>
         {/* github */}
-        <FaGithub size={60} />
+        <FaGithub className={styles.FaGithub} />
         <div className={styles.buffer}></div>
         <span>GitHub</span>
       </a>
@@ -22,7 +22,7 @@ export default function ContactDetails() {
         className={styles.detail}
       >
         {/* linkedin */}
-        <FaLinkedin size={60} />
+        <FaLinkedin className={styles.FaLinkedIn} />
         <div className={styles.buffer}></div>
         <span>LinkedIn</span>
       </a>
