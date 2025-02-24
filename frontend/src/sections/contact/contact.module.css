@@ -1,3 +1,9 @@
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+}
+
 /* Contact.jsx */
 .contactSection {
   display: grid;
@@ -7,26 +13,20 @@
   margin-top: 4rem;
 }
 
-.contactFormCol {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 /* Details Column */
 .detailsCol {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 3rem;
-  padding: 2rem;
+  padding-bottom: 2rem;
 }
 
 .detail {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  margin-bottom: 1.5rem;
   width: 100%;
   max-width: 18.75rem;
   text-decoration: none;
@@ -54,7 +54,23 @@
   padding: 0 0 0.05rem 0;
 }
 
+.HiMail,
+.FaGithub,
+.FaLinkedIn {
+  font-size: 3.75rem;
+  margin-right: 3rem;
+}
+
+
 /* ContactForm.jsx */
+
+.contactFormCol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 4rem;
+}
+
 .contactFormContainer {
   width: 100%;
   max-width: 25rem;
@@ -99,6 +115,28 @@
 }
 
 @media (max-width: 480px) {
+  .headerContainer {
+    padding: 2.5rem 0 2.5rem 0;
+  }
+
+  .contactSection {
+    margin: 0;
+  }
+
+  .HiMail,
+  .FaGithub,
+  .FaLinkedIn {
+    font-size: 2.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .detail span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--primary);
+  }
+
   .contactFormContainer {
     width: 95%;
   }
