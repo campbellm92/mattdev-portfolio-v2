@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <>
       <div className={styles.headerContainer}>
-        <h1>Contatti</h1>
+        <h1 className={styles.header}>Contatti</h1>
       </div>
       <div className={styles.contactSection} id="contactSection">
         <ContactDetails />
