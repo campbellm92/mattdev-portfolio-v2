@@ -4,6 +4,10 @@
   padding-top: 4rem;
 }
 
+.header {
+  color: var(--text-primary)
+}
+
 /* Contact.jsx */
 .contactSection {
   display: grid;
