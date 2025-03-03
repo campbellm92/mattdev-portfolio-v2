@@ -81,7 +81,10 @@ html {
 }
 
 body {
-  background-color: var(--background);
+  /* background: conic-gradient(from 360deg at 1% 0%, var(--background), rgba(0, 0, 0, 0)), url("/noise.svg");
+  background-size: cover;
+  background-repeat: repeat; */
+  background: var(--background);
   padding: 0;
   margin: 0;
 }
@@ -91,6 +94,8 @@ p {
   /* Use base size for paragraphs */
   margin-bottom: 1rem;
 }
+
+
 
 h1 {
   font-size: var(--font-size-h1);
