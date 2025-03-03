@@ -11,20 +11,37 @@ export default function Hero() {
         <p className={styles.content}>
           Mi chiamo Matt. Sono uno{" "}
           <span className={styles.heroSpan}>Sviluppatore Fullstack</span>{" "}
-           neolaureato dall'Australia 🦘 con sede ad{" "}
-          <span className={styles.heroSpan}>Asti, Italia</span>. Lavoravo come
-          insegnante di inglese, ma ho scoperto una passione per lo sviluppo web
-          e ho voluto affrontare una nuova sfida.
+          neolaureato dall'Australia 🦘 e attualmente vivo ad{" "}
+          <span className={styles.heroSpan}>Asti</span>. Il mio interesse per lo
+          sviluppo è nato durante la mia carriera come insegnante di inglese e
+          ho scoperto rapidamente una passione per la creazione di applicazioni
+          full-stack scalibile.
         </p>
         <p className={styles.content}>
-          Amo l'architettura a componenti frontend e sono appassionato di design
-          e sviluppo di componenti UI. Il mio sogno è lavorare nel settore
-          dell'e-learning come sviluppatore.
+          Mi piace lavorare con architetture frontend su componenti, ma sono
+          anche entusiasta dello sviluppo backend, sia nella progettazione di
+          API nella gestire database. Questo sito, infatti, è stato costruito
+          utilizzando la mia libreria UI personalizzata chiamata{" "}
+          <a
+            href="https://github.com/campbellm92/mallee-ui"
+            className={styles.heroLinks}
+          >
+            Mallee
+          </a>
+          . Al momento mi sto occupando del mantenimento di questa libreria in
+          TypeScript/React e sto sviluppando anche{" "}
+          <a
+            href="https://github.com/campbellm92/suoniamo"
+            className={styles.heroLinks}
+          >
+            un'app full-stack
+          </a>{" "}
+          con PHP/Laravel.
         </p>
         <p className={styles.content}>
-          L'italiano non è la mia ligua madre, ma sto imparando. Altrimenti
-          parlo <span className={styles.heroSpan}>inglese</span> e{" "}
-          <span className={styles.heroSpan}>tedesco</span>.
+          Altri progetti sono qui sotto 👇. Sono sempre aperto a collaborazioni
+          e nuove sfide. Sentiti libero di contattarmi—mi farebbe piacere
+          connetterci!
         </p>
       </div>
     </div>
