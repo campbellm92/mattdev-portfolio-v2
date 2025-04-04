@@ -1,0 +1,39 @@
+.sectionTitle {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.selectBtns {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0 4rem;
+    margin-top: 2rem;
+}
+
+
+.projectContainer {
+    padding: 4rem;
+
+}
+
+.projectCard {
+    display: flex;
+    margin-bottom: 4rem;
+}
+
+.imgBadgeContainer {}
+
+.projectImg {
+    width: 45%;
+    border: 0.25rem solid var(--primary);
+    border-radius: 0.25rem;
+}
+
+.badgeContainer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.75rem;
+
+}
