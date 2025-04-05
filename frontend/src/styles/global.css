@@ -78,13 +78,12 @@ html {
 * {
   box-sizing: border-box;
   font-family: var(--font-family);
+  outline: 1px solid var(--secondary);
 }
 
 body {
-  /* background: conic-gradient(from 360deg at 1% 0%, var(--background), rgba(0, 0, 0, 0)), url("/noise.svg");
-  background-size: cover;
-  background-repeat: repeat; */
   background: var(--background);
+  background-image: url("/noise.svg");
   padding: 0;
   margin: 0;
 }
