@@ -97,6 +97,10 @@
   justify-content: flex-end;
 }
 
+.buttonCustom {
+  font-weight: bolder;
+}
+
 .successMsg {
   display: flex;
   justify-content: flex-end;
