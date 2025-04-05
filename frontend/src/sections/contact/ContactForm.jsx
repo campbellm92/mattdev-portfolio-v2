@@ -107,8 +107,8 @@ export default function ContactForm() {
           placeholder="Scrivi un messaggio"
         />
         <div className={styles.btnContainer}>
-          <Button size="large" type="submit">
-            Inviare
+          <Button size="large" type="submit" className={styles.buttonCustom}>
+            INVIARE
           </Button>
         </div>
 
