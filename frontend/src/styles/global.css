@@ -29,7 +29,7 @@
   /* Typography */
   --font-family: "IBM Plex Mono", sans-serif;
   /* Default font size */
-  --font-size-base: 16px;
+  --font-size-base: 1rem;
   /* Heading font sizes */
   --font-size-h1: 2rem;
   /* 32px */
@@ -78,7 +78,7 @@ html {
 * {
   box-sizing: border-box;
   font-family: var(--font-family);
-  outline: 1px solid var(--secondary);
+  /* outline: 1px solid var(--secondary); */
 }
 
 body {
@@ -89,8 +89,6 @@ body {
 }
 
 p {
-  font-size: var(--font-size-p);
-  /* Use base size for paragraphs */
   margin-bottom: 1rem;
 }
 
