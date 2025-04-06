@@ -2,6 +2,7 @@ import styles from "./alt.module.css";
 import projectData from "../../data/projectData.js";
 import { Button, Badge } from "mallee-ui";
 import { useState } from "react";
+import GitHubCalendar from "react-github-calendar";
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -27,49 +28,51 @@ export default function Projects() {
         <h1>Progetti</h1>
       </div>
 
-      <div className={styles.selectBtns}>
-        <Button
-          variant={selectedCategory === "all" ? "filled" : "outline"}
-          size="large"
-          className={styles.buttonCustom}
-          onClick={() => setSelectedCategory("all")}
-        >
-          TUTTI
-        </Button>
-        <Button
-          variant={selectedCategory === "professional" ? "filled" : "outline"}
-          size="large"
-          className={styles.buttonCustom}
-          onClick={() => setSelectedCategory("professional")}
-        >
-          PROFESSIONALI
-        </Button>
-        <Button
-          variant={selectedCategory === "university" ? "filled" : "outline"}
-          size="large"
-          className={styles.buttonCustom}
-          onClick={() => setSelectedCategory("university")}
-        >
-          UNIVERSITARI
-        </Button>
-        <Button
-          variant={selectedCategory === "personal" ? "filled" : "outline"}
-          size="large"
-          className={styles.buttonCustom}
-          onClick={() => setSelectedCategory("personal")}
-        >
-          PERSONALI
-        </Button>
-        <Button
-          variant={
-            selectedCategory === "frontend mentor" ? "filled" : "outline"
-          }
-          size="large"
-          className={styles.buttonCustom}
-          onClick={() => setSelectedCategory("frontend mentor")}
-        >
-          FRONTEND MENTOR
-        </Button>
+      <div className={styles.selectBtnsWrapper}>
+        <div className={styles.selectBtns}>
+          <Button
+            variant={selectedCategory === "all" ? "filled" : "outline"}
+            size="large"
+            className={styles.buttonCustom}
+            onClick={() => setSelectedCategory("all")}
+          >
+            TUTTI
+          </Button>
+          <Button
+            variant={selectedCategory === "professional" ? "filled" : "outline"}
+            size="large"
+            className={styles.buttonCustom}
+            onClick={() => setSelectedCategory("professional")}
+          >
+            PROFESSIONALI
+          </Button>
+          <Button
+            variant={selectedCategory === "university" ? "filled" : "outline"}
+            size="large"
+            className={styles.buttonCustom}
+            onClick={() => setSelectedCategory("university")}
+          >
+            UNIVERSITARI
+          </Button>
+          <Button
+            variant={selectedCategory === "personal" ? "filled" : "outline"}
+            size="large"
+            className={styles.buttonCustom}
+            onClick={() => setSelectedCategory("personal")}
+          >
+            PERSONALI
+          </Button>
+          <Button
+            variant={
+              selectedCategory === "frontend mentor" ? "filled" : "outline"
+            }
+            size="large"
+            className={styles.buttonCustom}
+            onClick={() => setSelectedCategory("frontend mentor")}
+          >
+            FRONTEND MENTOR
+          </Button>
+        </div>
       </div>
 
       <div className={styles.projectContainer}>
@@ -114,6 +117,12 @@ export default function Projects() {
             </div>
           );
         })}
+      </div>
+      <div className={styles.githubCalendarContainer}>
+        <div className={styles.githubCalendarWrapper}>
+          <h2 className={styles.contributionsTitle}>Contributi su Github</h2>
+          <GitHubCalendar username="campbellm92" />
+        </div>
       </div>
     </>
   );
