@@ -2,6 +2,7 @@ import styles from "./alt.module.css";
 import projectData from "../../data/projectData.js";
 import { Button, Badge } from "mallee-ui";
 import { useState } from "react";
+import useIsMobile from "../../../hooks/useIsMobile.js";
 import GitHubCalendar from "react-github-calendar";
 
 export default function Projects() {
@@ -22,6 +23,8 @@ export default function Projects() {
     return null;
   };
 
+  const isMobile = useIsMobile();
+
   return (
     <>
       <div className={styles.sectionTitle}>
@@ -32,7 +35,7 @@ export default function Projects() {
         <div className={styles.selectBtns}>
           <Button
             variant={selectedCategory === "all" ? "filled" : "outline"}
-            size="large"
+            size={isMobile ? "medium" : "large"}
             className={styles.buttonCustom}
             onClick={() => setSelectedCategory("all")}
           >
@@ -40,7 +43,7 @@ export default function Projects() {
           </Button>
           <Button
             variant={selectedCategory === "professional" ? "filled" : "outline"}
-            size="large"
+            size={isMobile ? "medium" : "large"}
             className={styles.buttonCustom}
             onClick={() => setSelectedCategory("professional")}
           >
@@ -48,7 +51,7 @@ export default function Projects() {
           </Button>
           <Button
             variant={selectedCategory === "university" ? "filled" : "outline"}
-            size="large"
+            size={isMobile ? "medium" : "large"}
             className={styles.buttonCustom}
             onClick={() => setSelectedCategory("university")}
           >
@@ -56,7 +59,7 @@ export default function Projects() {
           </Button>
           <Button
             variant={selectedCategory === "personal" ? "filled" : "outline"}
-            size="large"
+            size={isMobile ? "medium" : "large"}
             className={styles.buttonCustom}
             onClick={() => setSelectedCategory("personal")}
           >
@@ -66,7 +69,7 @@ export default function Projects() {
             variant={
               selectedCategory === "frontend mentor" ? "filled" : "outline"
             }
-            size="large"
+            size={isMobile ? "medium" : "large"}
             className={styles.buttonCustom}
             onClick={() => setSelectedCategory("frontend mentor")}
           >
@@ -104,7 +107,15 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <p>{project.content}</p>
+                <p className={styles.description}>{project.description}</p>
+
+                <ul className={styles.featuresList}>
+                  {project.features.map((feature, index) => (
+                    <li key={index} className={styles.projectFeature}>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
 
                 <div className={styles.statusBtns}>
                   {statusLabel && (
