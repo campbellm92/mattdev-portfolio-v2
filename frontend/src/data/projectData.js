@@ -10,8 +10,15 @@ const projectData = [
   {
     href: "https://localis-capstone-f7a22eb1b92e.herokuapp.com/",
     title: "Localis",
-    content:
+    description:
       "Progetto stage: Dashboard di visualizzazione dei dati per l'industria del turismo.",
+    features: [
+      "Dashboard personalizzata con React e Tailwind",
+      "Grafici con Recharts",
+      "Gestione complessa dello stato con React Context API",
+      "Backend performante in Node.js/Express",
+      "Autenticazione con JWT",
+    ],
     img: localisImage,
     badges: [
       { children: "React", variant: "filled", color: "secondary" },
@@ -28,9 +35,14 @@ const projectData = [
   },
   {
     href: "https://github.com/campbellm92/mallee-ui",
-    title: "Mallee-UI (BETA)",
-    content:
+    title: "Mallee-UI",
+    description:
       "La mia UI library, che sto costantemente aggiungendo e perfezionando. Questo sito è costruito con Mallee!",
+    features: [
+      "Libreria di componenti UI personalizzati in React",
+      "test visivo dei componenti con Storybook",
+      "Progetto open source su NPM",
+    ],
     img: malleeImage,
     badges: [
       { children: "TypeScript", variant: "filled", color: "secondary" },
@@ -45,7 +57,13 @@ const projectData = [
   {
     href: "https://curlew.mattdev.it/",
     title: "Curlew",
-    content: "Una piattaforma di markdown blogging minimalista.",
+    description: "Una piattaforma di markdown blogging minimalista.",
+    features: [
+      "Template HTML puri",
+      "JavaScript per il caricamento dei post",
+      "stile con CSS vanilla",
+      "syntax highlighting per il codice",
+    ],
     img: curlewImage,
     badges: [
       { children: "JavaScript", variant: "filled", color: "secondary" },
@@ -60,8 +78,14 @@ const projectData = [
   {
     href: "https://github.com/campbellm92/world-happiness-rankings",
     title: "World Happiness Rankings",
-    content:
+    description:
       "Progetto di visualizzazione dei dati completato durante il mio diploma universitario.",
+    features: [
+      "Tabelle e grafici a linee",
+      "fetch dei dati da una REST API",
+      "autenticazione con JSON Web Token",
+      "UI con componenti React-Bootstrap",
+    ],
     img: whrImage,
     badges: [
       { children: "React", variant: "filled", color: "secondary" },
@@ -73,11 +97,13 @@ const projectData = [
     category: "university",
     status: "github",
   },
+
   {
     href: "https://campbellm92.github.io/bookcycle/",
     title: "BookCycle",
-    content:
+    description:
       "Libreria online, realizzata con Bootstrap. Completato per il corso universitario.",
+    features: ["Mockup statico realizzato con HTML, CSS e Bootstrap"],
     img: bookcycleImage,
     badges: [
       { children: "Bootstrap", variant: "filled", color: "secondary" },
@@ -91,8 +117,14 @@ const projectData = [
   {
     href: "https://github.com/campbellm92/movies-app",
     title: "PopcornBase",
-    content:
+    description:
       "Database di film completato come parte della mia formazione backend (Node, Express) all'università.",
+    features: [
+      "Template Handlebars con HTML e CSS personalizzati",
+      "backend in Express",
+      "database MySQL con query tramite Knex.js",
+      "autenticazione con JWT",
+    ],
     img: popcornbaseImage,
     badges: [
       { children: "Node", variant: "filled", color: "secondary" },
@@ -110,8 +142,9 @@ const projectData = [
   {
     href: "https://campbellm92.github.io/alltrails-clone/",
     title: "Alltrails Clone",
-    content:
+    description:
       "Un clone di website di trekking Alltrails realizzato completamente con HTML e CSS.",
+    features: ["Mockup statico realizzato interamente con HTML e CSS"],
     img: tastrailsImage,
     badges: [
       { children: "HTML", variant: "filled", color: "secondary" },
