@@ -2,14 +2,21 @@
     display: flex;
     justify-content: center;
     padding-top: 2rem;
+    text-decoration: underline;
+    text-decoration-color: var(--primary)
 }
 
 .selectBtns {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 1rem;
     padding: 0 4rem;
     margin-top: 2rem;
+}
+
+.buttonCustom {
+    font-weight: bolder;
 }
 
 
@@ -20,20 +27,50 @@
 
 .projectCard {
     display: flex;
+    gap: 2rem;
     margin-bottom: 4rem;
 }
 
-.imgBadgeContainer {}
+.imgBadgeContainer {
+    flex: 0 0 auto;
+    width: 45%;
+}
 
 .projectImg {
-    width: 45%;
+    width: 100%;
     border: 0.25rem solid var(--primary);
     border-radius: 0.25rem;
 }
 
 .badgeContainer {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     margin-top: 0.75rem;
+    width: 100%;
+}
+
+.projectTitle {}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    font-size: larger;
+}
+
+.statusBtns {
+    display: flex;
+    justify-content: end;
+    margin-top: auto;
+
+}
+
+.statusTag {
+    font-weight: bolder;
+    color: var(--primary);
+    font-size: 1.5rem;
+    text-decoration: none;
 
 }
