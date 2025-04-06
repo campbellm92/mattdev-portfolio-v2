@@ -1,8 +1,18 @@
 import styles from "./alt.module.css";
 import projectData from "../../data/projectData.js";
 import { Button, Badge } from "mallee-ui";
+import { useState } from "react";
 
 export default function Projects() {
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
+  // filter btns by category
+  const filteredProjects =
+    selectedCategory === "all"
+      ? projectData
+      : projectData.filter((project) => project.category === selectedCategory);
+
+  // set UI based on project status
   const setProjectStatus = (status) => {
     if (status === "live") return "🌐 Live";
     if (status === "in development") return "🧱 In Sviluppo";
@@ -18,22 +28,52 @@ export default function Projects() {
       </div>
 
       <div className={styles.selectBtns}>
-        <Button variant="outline" size="large" className={styles.buttonCustom}>
+        <Button
+          variant={selectedCategory === "all" ? "filled" : "outline"}
+          size="large"
+          className={styles.buttonCustom}
+          onClick={() => setSelectedCategory("all")}
+        >
           TUTTI
         </Button>
-        <Button variant="outline" size="large" className={styles.buttonCustom}>
+        <Button
+          variant={selectedCategory === "professional" ? "filled" : "outline"}
+          size="large"
+          className={styles.buttonCustom}
+          onClick={() => setSelectedCategory("professional")}
+        >
           PROFESSIONALI
         </Button>
-        <Button variant="outline" size="large" className={styles.buttonCustom}>
+        <Button
+          variant={selectedCategory === "university" ? "filled" : "outline"}
+          size="large"
+          className={styles.buttonCustom}
+          onClick={() => setSelectedCategory("university")}
+        >
+          UNIVERSITARI
+        </Button>
+        <Button
+          variant={selectedCategory === "personal" ? "filled" : "outline"}
+          size="large"
+          className={styles.buttonCustom}
+          onClick={() => setSelectedCategory("personal")}
+        >
           PERSONALI
         </Button>
-        <Button variant="outline" size="large" className={styles.buttonCustom}>
+        <Button
+          variant={
+            selectedCategory === "frontend mentor" ? "filled" : "outline"
+          }
+          size="large"
+          className={styles.buttonCustom}
+          onClick={() => setSelectedCategory("frontend mentor")}
+        >
           FRONTEND MENTOR
         </Button>
       </div>
 
       <div className={styles.projectContainer}>
-        {projectData.map((project, index) => {
+        {filteredProjects.map((project, index) => {
           const statusLabel = setProjectStatus(project.status);
 
           return (
@@ -65,7 +105,9 @@ export default function Projects() {
 
                 <div className={styles.statusBtns}>
                   {statusLabel && (
-                    <span className={styles.statusTag}>{statusLabel}</span>
+                    <a href={project.href} className={styles.statusTag}>
+                      {statusLabel}
+                    </a>
                   )}
                 </div>
               </div>
