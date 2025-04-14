@@ -29,23 +29,31 @@
   /* Typography */
   --font-family: "IBM Plex Mono", sans-serif;
   /* Default font size */
-  --font-size-base: 1rem;
-  /* Heading font sizes */
-  --font-size-h1: 2rem;
-  /* 32px */
-  --font-size-h2: 1.75rem;
-  /* 28px */
-  --font-size-h3: 1.5rem;
-  /* 24px */
-  --font-size-h4: 1.25rem;
-  /* 20px */
-  --font-size-h5: 1rem;
-  /* 16px */
-  --font-size-h6: 0.875rem;
-  /* 14px */
+  /* Default base size */
+  --font-size-base: clamp(1rem, 0.8vw + 0.8rem, 1.125rem);
+  /* ~16px–18px */
+
+  /* Headings */
+  --font-size-h1: clamp(2rem, 2vw + 1rem, 3rem);
+  /* 32px–48px */
+  --font-size-h2: clamp(1.75rem, 1.5vw + 1rem, 2.5rem);
+  /* 28px–40px */
+  --font-size-h3: clamp(1.5rem, 1.2vw + 1rem, 2rem);
+  /* 24px–32px */
+  --font-size-h4: clamp(1.25rem, 1vw + 0.8rem, 1.5rem);
+  /* 20px–24px */
+  --font-size-h5: clamp(1rem, 0.8vw + 0.6rem, 1.25rem);
+  /* 16px–20px */
+  --font-size-h6: clamp(0.875rem, 0.5vw + 0.6rem, 1rem);
+  /* 14px–16px */
+
   /* Small text */
-  --font-size-small: 0.875rem;
-  /* 14px */
+  --font-size-small: clamp(0.75rem, 0.3vw + 0.5rem, 0.875rem);
+  /* 12px–14px */
+
+  /* List items */
+  --font-size-li: clamp(0.95rem, 0.6vw + 0.6rem, 1.125rem);
+
 }
 
 [data-theme="dark"] {
@@ -89,10 +97,9 @@ body {
 }
 
 p {
-  margin-bottom: 1rem;
+  font-size: var(--font-size-base);
+
 }
-
-
 
 h1 {
   font-size: var(--font-size-h1);
@@ -122,6 +129,10 @@ h5 {
 h6 {
   font-size: var(--font-size-h6);
   margin: 0;
+}
+
+li {
+  font-size: var(--font-size-li);
 }
 
 small,
