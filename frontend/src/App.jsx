@@ -1,10 +1,15 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
+import SingleProjectPage from "./pages/projects/SingleProjectPage";
 
 function App() {
   return (
-    <div>
-      <Home />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects/:id" element={<SingleProjectPage />} />
+      </Routes>
+    </Router>
   );
 }
 
