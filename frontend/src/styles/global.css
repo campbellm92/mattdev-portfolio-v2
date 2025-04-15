@@ -3,85 +3,65 @@
 
 :root {
   /* Colour */
-  --primary: rgb(6, 102, 73);
-  --primary-hover: rgb(6, 102, 73, 0.9);
-  --secondary: rgb(194, 37, 92);
-  --secondary-hover: rgb(194, 37, 92, 0.9);
-  --neutral: rgb(229, 229, 229);
-  --neutral-hover: rgba(229, 229, 229, 0.9);
-  /* tailwind neutral 500 */
-  --neutral-darker: rgb(115, 115, 115);
-  --neutral-darker-hover: rgba(115, 115, 115, 0.9);
-  /* tailwind neutral 800 */
-  --neutral-darkest: rgb(38, 38, 38);
-  --text-primary: rgb(33, 37, 41);
-  --text-secondary: rgb(243, 244, 246);
-  --background: rgb(243, 244, 246);
-  --info: #0ea5e9;
-  --info-hover: rgba(14, 165, 233, 0.9);
-  --success: #10b981;
-  --success-hover: rgba(16, 185, 129, 0.9);
-  --warning: #eab308;
-  --warning-hover: rgba(234, 179, 8, 0.9);
-  --error: #f43f5e;
-  --error-hover: rgba(244, 63, 94, 0.9);
+  --primary: oklch(50% 0.134 242.749);
+  --primary-hover: oklch(50% 0.134 242.749 / 0.9);
+  --secondary: oklch(59.2% 0.249 0.584);
+  --secondary-hover: oklch(59.2% 0.249 0.584 / 0.9);
+  --neutral: oklch(0.9 0.01 260);
+  --neutral-hover: oklch(0.9 0.01 260 / 0.9);
+  --neutral-darker: oklch(0.54 0.01 260);
+  --neutral-darker-hover: oklch(0.54 0.01 260 / 0.9);
+  --neutral-darkest: oklch(0.21 0.01 260);
+  --text-primary: oklch(0.26 0.01 270);
+  --text-secondary: oklch(0.95 0.01 260);
+  --background: oklch(0.95 0.01 260);
+  --background-opposite: oklch(0.26 0.01 270);
+  --info: oklch(0.73 0.23 240);
+  --info-hover: oklch(0.73 0.23 240 / 0.9);
+  --success: oklch(0.72 0.23 145);
+  --success-hover: oklch(0.72 0.23 145 / 0.9);
+  --warning: oklch(0.87 0.23 95);
+  --warning-hover: oklch(0.87 0.23 95 / 0.9);
+  --error: oklch(0.7 0.25 20);
+  --error-hover: oklch(0.7 0.25 20 / 0.9);
 
   /* Typography */
   --font-family: "IBM Plex Mono", sans-serif;
-  /* Default font size */
-  /* Default base size */
+
   --font-size-base: clamp(1rem, 0.8vw + 0.8rem, 1.125rem);
-  /* ~16px–18px */
-
-  /* Headings */
   --font-size-h1: clamp(2rem, 2vw + 1rem, 3rem);
-  /* 32px–48px */
   --font-size-h2: clamp(1.75rem, 1.5vw + 1rem, 2.5rem);
-  /* 28px–40px */
   --font-size-h3: clamp(1.5rem, 1.2vw + 1rem, 2rem);
-  /* 24px–32px */
   --font-size-h4: clamp(1.25rem, 1vw + 0.8rem, 1.5rem);
-  /* 20px–24px */
   --font-size-h5: clamp(1rem, 0.8vw + 0.6rem, 1.25rem);
-  /* 16px–20px */
   --font-size-h6: clamp(0.875rem, 0.5vw + 0.6rem, 1rem);
-  /* 14px–16px */
-
-  /* Small text */
   --font-size-small: clamp(0.75rem, 0.3vw + 0.5rem, 0.875rem);
-  /* 12px–14px */
-
-  /* List items */
   --font-size-li: clamp(0.95rem, 0.6vw + 0.6rem, 1.125rem);
-
 }
 
 [data-theme="dark"] {
-  --primary: rgb(12, 166, 120);
-  --primary-hover: rgb(12, 166, 120, 0.9);
-  --secondary: rgb(194, 37, 92);
-  --secondary-hover: rgb(194, 37, 92, 0.9);
-  --neutral: rgb(229, 229, 229);
-  --neutral-hover: rgba(229, 229, 229, 0.9);
-  /* tailwind neutral 500 */
-  --neutral-darker: rgb(115, 115, 115);
-  --neutral-darker-hover: rgba(115, 115, 115, 0.9);
-  --text-primary: rgb(243, 244, 246);
-  --text-secondary: rgb(33, 37, 41);
-  --background: rgb(33, 37, 41);
-  --info: #0ea5e9;
-  --info-hover: rgba(14, 165, 233, 0.9);
-  --success: #10b981;
-  --success-hover: rgba(16, 185, 129, 0.9);
-  --warning: #eab308;
-  --warning-hover: rgba(234, 179, 8, 0.9);
-  --error: #f43f5e;
-  --error-hover: rgba(244, 63, 94, 0.9);
+  --primary: oklch(50% 0.134 242.749);
+  --primary-hover: oklch(50% 0.134 242.749 / 0.9);
+  --secondary: oklch(59.2% 0.249 0.584);
+  --secondary-hover: oklch(59.2% 0.249 0.584 / 0.9);
+  --neutral: oklch(0.9 0.01 260);
+  --neutral-hover: oklch(0.9 0.01 260 / 0.9);
+  --neutral-darker: oklch(0.54 0.01 260);
+  --neutral-darker-hover: oklch(0.54 0.01 260 / 0.9);
+  --text-primary: oklch(0.95 0.01 260);
+  --text-secondary: oklch(0.26 0.01 270);
+  --background: oklch(0.26 0.01 270);
+  --background-opposite: oklch(0.95 0.01 260);
+  --info: oklch(0.73 0.23 240);
+  --info-hover: oklch(0.73 0.23 240 / 0.9);
+  --success: oklch(0.72 0.23 145);
+  --success-hover: oklch(0.72 0.23 145 / 0.9);
+  --warning: oklch(0.87 0.23 95);
+  --warning-hover: oklch(0.87 0.23 95 / 0.9);
+  --error: oklch(0.7 0.25 20);
+  --error-hover: oklch(0.7 0.25 20 / 0.9);
 }
 
-html {
-  font-size: var(--font-size-base);
-}
 
 * {
   box-sizing: border-box;
@@ -89,16 +69,19 @@ html {
   /* outline: 1px solid var(--secondary); */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  background-image: url("/noise.svg");
+  background-color: var(--background);
+  /* background-image: url("/noise.svg"); */
   padding: 0;
   margin: 0;
 }
 
 p {
   font-size: var(--font-size-base);
-
 }
 
 h1 {
@@ -143,4 +126,17 @@ small,
 hr {
   width: 90%;
   border: 0.25rem dashed var(--primary);
+}
+
+/* Homepage sections  */
+.sectionTitle {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+
+}
+
+.sectionTitle h1 {
+  display: inline-block;
+  color: var(--text-primary);
 }
