@@ -2,6 +2,7 @@ import styles from "./alt.module.css";
 import projectData from "../../data/projectData.js";
 import { Button, Badge } from "mallee-ui";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import useIsMobile from "../../../hooks/useIsMobile.js";
 import GitHubCalendar from "react-github-calendar";
 
@@ -26,7 +27,7 @@ export default function Projects() {
   const isMobile = useIsMobile();
 
   return (
-    <>
+    <div id="projectsSection">
       <div className={styles.sectionTitle}>
         <h1>Progetti</h1>
       </div>
@@ -83,49 +84,51 @@ export default function Projects() {
           const statusLabel = setProjectStatus(project.status);
 
           return (
-            <div key={index} className={styles.projectCard}>
-              <div className={styles.imgBadgeContainer}>
-                <img
-                  src={project.img}
-                  alt={`${project.title}`}
-                  className={styles.projectImg}
-                />
-              </div>
-
-              <div className={styles.content}>
-                <h1 className={styles.projectTitle}>{project.title}</h1>
-
-                <div className={styles.badgeContainer}>
-                  {project.badges.map((badge, badgeIndex) => (
-                    <Badge
-                      key={badgeIndex}
-                      variant={badge.variant}
-                      color={badge.color}
-                    >
-                      {badge.children.toUpperCase()}
-                    </Badge>
-                  ))}
+            <Link to={`/projects/${project.id}`} key={index}>
+              <div className={styles.projectCard}>
+                <div className={styles.imgBadgeContainer}>
+                  <img
+                    src={project.img}
+                    alt={`${project.title}`}
+                    className={styles.projectImg}
+                  />
                 </div>
 
-                <p className={styles.description}>{project.description}</p>
+                <div className={styles.content}>
+                  <h1 className={styles.projectTitle}>{project.title}</h1>
 
-                <ul className={styles.featuresList}>
-                  {project.features.map((feature, index) => (
-                    <li key={index} className={styles.projectFeature}>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                  <div className={styles.badgeContainer}>
+                    {project.badges.map((badge, badgeIndex) => (
+                      <Badge
+                        key={badgeIndex}
+                        variant={badge.variant}
+                        color={badge.color}
+                      >
+                        {badge.children.toUpperCase()}
+                      </Badge>
+                    ))}
+                  </div>
 
-                <div className={styles.statusBtns}>
-                  {statusLabel && (
-                    <a href={project.href} className={styles.statusTag}>
-                      {statusLabel}
-                    </a>
-                  )}
+                  <p className={styles.description}>{project.description}</p>
+                  {/* 
+                  <ul className={styles.featuresList}>
+                    {project.features.map((feature, index) => (
+                      <li key={index} className={styles.projectFeature}>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul> */}
+
+                  <div className={styles.statusBtns}>
+                    {statusLabel && (
+                      <a href={project.href} className={styles.statusTag}>
+                        {statusLabel}
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
@@ -135,7 +138,7 @@ export default function Projects() {
           <GitHubCalendar username="campbellm92" />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
