@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import styles from "./navbar.module.css";
 
 export default function Navbar() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("");
 
+  // dark mode
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) setTheme(savedTheme);
@@ -11,27 +12,34 @@ export default function Navbar() {
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
   }, [theme]);
-
-  // useEffect(() => {
-  //   const root = document.documentElement;
-  //   root.setAttribute("data-theme", theme);
-  //   root.setAttribute("transition-style", "in:wipe:left");
-
-  //   const timeout = setTimeout(() => {
-  //     root.removeAttribute("transition-style");
-  //   }, 2500);
-
-  //   return () => clearTimeout(timeout);
-  // }, [theme]);
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
+  // change color and size on scroll
+
+  useEffect(() => {
+    window.onscroll = function () {
+      changeStyleOnScroll();
+    };
+    function changeStyleOnScroll() {
+      if (
+        document.body.scrollTop > 80 ||
+        document.documentElement.scrollTop > 80
+      ) {
+        document.getElementById("main-nav").style.padding = "0.5rem";
+      } else {
+        document.getElementById("main-nav").style.padding = "1.5rem";
+      }
+    }
+  });
+
   return (
     <>
-      <nav>
+      <nav id="main-nav">
         <div className={styles.brandBgWrapper}>
           <a href="/" className={styles.brand}>
             MC
@@ -41,7 +49,7 @@ export default function Navbar() {
         <div className={styles.rightNav}>
           <div>
             <div onClick={toggleTheme} className={styles.darkModeIconBg}>
-              {theme === "light" ? (
+              {theme === "dark" ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="var(--secondary)"
