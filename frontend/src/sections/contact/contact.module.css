@@ -5,7 +5,7 @@
 }
 
 .header {
-  color: var(--text-primary)
+  color: var(--text-primary);
 }
 
 /* Contact.jsx */
@@ -86,9 +86,17 @@
   background-color: inherit;
 }
 
+
 .contactHeader {
   padding-bottom: 1rem;
   color: var(--text-primary);
+}
+
+.labelInputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 
@@ -97,16 +105,12 @@
   justify-content: flex-end;
 }
 
-.buttonCustom {
-  font-weight: bolder;
-}
-
-.successMsg {
+.successMsgContainer {
   display: flex;
   justify-content: flex-end;
-  color: var(--success);
-  font-weight: 500;
 }
+
+/*  */
 
 @media (max-width: 900px) {
   .contactSection {

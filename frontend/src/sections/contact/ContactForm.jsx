@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./contact.module.css";
-import { TextInput, TextArea, Button } from "mallee-ui";
+import { Button } from "mallee-ui";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -14,6 +14,7 @@ export default function ContactForm() {
   const validateName = () => {
     if (!name || name.trim().length === 0) {
       setNameError("Il nome è obbligatorio.");
+      setSuccess("");
     } else {
       setNameError(null);
     }
@@ -24,6 +25,7 @@ export default function ContactForm() {
   const validateEmail = () => {
     if (!email) {
       setEmailError("L'email è obbligatoria.");
+      setSuccess("");
     } else if (!emailRegex.test(email)) {
       setEmailError("L'email non è valida.");
     } else setEmailError(null);
@@ -32,6 +34,7 @@ export default function ContactForm() {
   const validateMessage = () => {
     if (!message || message.trim().length === 0) {
       setMessageError("Non hai scritto qualcosa.");
+      setSuccess("");
     } else setMessageError(null);
   };
 
@@ -48,15 +51,14 @@ export default function ContactForm() {
     validateEmail();
     validateMessage();
 
-    const BACKEND_URL =
-      import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
+    const EMAIL_KEY = import.meta.env.VITE_EMAIL_KEY;
 
     if (!nameError && !emailError && !messageError) {
       try {
-        const response = await fetch(`${BACKEND_URL}/send-email`, {
+        const response = await fetch("https://api.web3forms.com/submit", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, email, message }),
+          body: JSON.stringify({ access_key: EMAIL_KEY, name, email, message }),
         });
         if (response.ok) {
           resetFields();
@@ -76,7 +78,67 @@ export default function ContactForm() {
     <div className={styles.contactFormCol}>
       <form className={styles.contactFormContainer} onSubmit={handleSubmit}>
         <h2 className={styles.contactHeader}>Inviami un messaggio</h2>
-        <TextInput
+        <div className={styles.labelInputContainer}>
+          <label htmlFor="name">Nome</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            onBlur={validateName}
+            placeholder="Inserisci il tuo nome"
+            className={`${nameError ? "input-error" : ""}`}
+          />
+          {nameError && <p className="text-error">{nameError}</p>}
+        </div>
+
+        <div className={styles.labelInputContainer}>
+          <label htmlFor="email">Email</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            onBlur={validateEmail}
+            placeholder="Inserisci il tuo email"
+            className={`${emailError ? "input-error" : ""}`}
+          />
+          {emailError && <p className="text-error">{emailError}</p>}
+        </div>
+
+        <div className={styles.labelInputContainer}>
+          <label htmlFor="message">Messagio</label>
+          <textarea
+            name="message"
+            id="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            onBlur={validateMessage}
+            placeholder="Scrivi un messaggio"
+            className={`${messageError ? "input-error" : ""}`}
+          ></textarea>
+          {messageError && <p className="text-error">{messageError}</p>}
+        </div>
+
+        <div className={styles.btnContainer}>
+          <Button size="large" type="submit" className={styles.buttonCustom}>
+            INVIARE
+          </Button>
+        </div>
+        <div className={styles.successMsgContainer}>
+          {success && (
+            <p className="text-success">Messaggio inviato con successo!</p>
+          )}
+        </div>
+      </form>
+    </div>
+  );
+}
+
+{
+  /* <TextInput
           name="name"
           label="Nome"
           value={name}
@@ -85,37 +147,5 @@ export default function ContactForm() {
           hasError={!!nameError}
           errorMessage={nameError || undefined}
           placeholder="Inserisci il tuo nome"
-        />
-        <TextInput
-          name="email"
-          label="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          onBlur={validateEmail}
-          hasError={!!emailError}
-          errorMessage={emailError || undefined}
-          placeholder="Inserisci il tuo email"
-        />
-        <TextArea
-          name="message"
-          label="Messaggio"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          onBlur={validateMessage}
-          hasError={!!messageError}
-          errorMessage={messageError || undefined}
-          placeholder="Scrivi un messaggio"
-        />
-        <div className={styles.btnContainer}>
-          <Button size="large" type="submit" className={styles.buttonCustom}>
-            INVIARE
-          </Button>
-        </div>
-
-        {success && (
-          <p className={styles.successMsg}>Messaggio inviato con successo!</p>
-        )}
-      </form>
-    </div>
-  );
+        /> */
 }
