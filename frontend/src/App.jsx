@@ -1,14 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
-import SingleProjectPage from "./pages/projects/SingleProjectPage";
-import "transition-style";
+// import SingleProjectPage from "./pages/projects/SingleProjectPage";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/projects/:id" element={<SingleProjectPage />} />
+        {/* <Route path="/projects/:id" element={<SingleProjectPage />} /> */}
       </Routes>
     </Router>
   );
