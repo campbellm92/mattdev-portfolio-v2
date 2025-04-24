@@ -5,6 +5,7 @@
   /* Colour */
   --primary: oklch(50% 0.134 242.749);
   --primary-hover: oklch(50% 0.134 242.749 / 0.9);
+  --primary-nav-scrolled: oklch(50% 0.134 242.749 / 0.4);
   --secondary: oklch(59.2% 0.249 0.584);
   --secondary-hover: oklch(59.2% 0.249 0.584 / 0.9);
   --neutral: oklch(0.9 0.01 260);
@@ -63,6 +64,7 @@
 }
 
 
+
 * {
   box-sizing: border-box;
   font-family: var(--font-family);
@@ -81,7 +83,7 @@ body {
   margin: 0;
 }
 
-/* Target the entire scrollbar */
+/* 
 ::-webkit-scrollbar {
   width: 1rem;
 }
@@ -93,9 +95,8 @@ body {
 ::-webkit-scrollbar-thumb {
   border-radius: 0.25rem;
   border: 0.5rem solid var(--secondary);
-  /* space around the thumb */
 }
-
+ */
 
 
 
@@ -220,4 +221,29 @@ textarea:focus {
 .sectionTitle h1 {
   display: inline-block;
   color: var(--text-primary);
+}
+
+html,
+body,
+nav,
+section,
+header,
+footer,
+main,
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+input,
+textarea,
+button {
+  transition:
+    background-color 0.7s ease,
+    color 0.7s ease,
+    border-color 0.7s ease;
 }
