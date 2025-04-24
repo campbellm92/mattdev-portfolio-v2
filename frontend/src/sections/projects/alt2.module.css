@@ -1,0 +1,93 @@
+.selectBtns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 4rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 480px) {
+  .selectBtns {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.buttonCustom {
+  color: var(--text-primary);
+  font-weight: bolder;
+}
+
+.projectCardsWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.projectBgContainer {
+  width: 90%;
+  height: 66%;
+  background-color: var(--primary);
+  border-radius: 0.25rem;
+  margin-bottom: 4rem;
+}
+
+.cardInner {
+  display: flex;
+  padding: 2rem;
+  color: oklch(0.95 0.01 260);
+}
+
+.badgesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  width: 100%;
+}
+
+.description {
+  font-style: italic;
+}
+
+.linkBtns {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 480px) {
+  .linkBtns {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.linkBtn {
+  font-weight: bolder;
+  color: oklch(0.95 0.01 260);
+  font-size: 1.25rem;
+  text-decoration: none;
+  border: 0.188rem solid oklch(0.9 0.01 260);
+  border-radius: 0.125rem;
+  padding: 0.5rem 1rem;
+}
+
+.linkBtn:hover {
+  color: oklch(0.26 0.01 270);
+  background-color: oklch(0.9 0.01 260);
+}
+
+.projectImgContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.projectImg {
+  width: 95%;
+  border-radius: 0.25rem;
+  box-shadow: 0.7rem 0.7rem var(--secondary);
+}
