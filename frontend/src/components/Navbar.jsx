@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import useNavScrollChange from "../hooks/useNavScrollChange";
 import styles from "./navbar.module.css";
 
 export default function Navbar() {
@@ -19,23 +20,8 @@ export default function Navbar() {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
-  // change color and size on scroll
-
-  useEffect(() => {
-    window.onscroll = function () {
-      changeStyleOnScroll();
-    };
-    function changeStyleOnScroll() {
-      if (
-        document.body.scrollTop > 80 ||
-        document.documentElement.scrollTop > 80
-      ) {
-        document.getElementById("main-nav").style.padding = "0.5rem";
-      } else {
-        document.getElementById("main-nav").style.padding = "1.5rem";
-      }
-    }
-  });
+  //change nav styles on scroll (see hooks > useNavScrollChange.jsx)
+  useNavScrollChange();
 
   return (
     <>
