@@ -41,8 +41,6 @@
   text-align: center;
 }
 
-
-
 .heroLinks {
   text-decoration-line: underline;
   text-decoration-style: dotted;
@@ -71,4 +69,11 @@
   background-color: var(--primary);
   font-weight: 600;
   padding: 0 0.25rem 0 0.25rem;
+}
+
+@media (max-width: 480px) {
+  .introContainer {
+    text-align: center;
+    padding: 1.5rem;
+  }
 }
