@@ -136,16 +136,3 @@ export default function ContactForm() {
     </div>
   );
 }
-
-{
-  /* <TextInput
-          name="name"
-          label="Nome"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          onBlur={validateName}
-          hasError={!!nameError}
-          errorMessage={nameError || undefined}
-          placeholder="Inserisci il tuo nome"
-        /> */
-}
