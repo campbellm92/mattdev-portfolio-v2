@@ -11,13 +11,19 @@ export default function Hero() {
         <p className={styles.content}>
           Mi chiamo Matt. Sono uno{" "}
           <span className={styles.heroSpan}>Sviluppatore Fullstack</span>{" "}
-          neolaureato dall'Australia 🦘 e attualmente vivo ad{" "}
-          <span className={styles.heroSpan}>Asti</span>. Il mio interesse per lo
-          sviluppo è nato durante la mia carriera come insegnante di inglese e
-          ho scoperto rapidamente una passione per la creazione di applicazioni
-          full-stack scalibile.
+          dall'Australia 🦘 e attualmente vivo ad{" "}
+          <span className={styles.heroSpan}>Asti 🍷</span> con mia moglie.
         </p>
         <p className={styles.content}>
+          Il mio interesse per lo sviluppo è nato durante la mia carriera come
+          insegnante di inglese e ho scoperto rapidamente una passione per la
+          creazione di applicazioni full-stack.
+        </p>
+        <p className={styles.content}>
+          Sto sempre lavorando a qualcosa, attualmente il sito web per un
+          colletivo artitistico locale.
+        </p>
+        {/* <p className={styles.content}>
           Mi piace lavorare con architetture frontend su componenti, ma sono
           anche entusiasta dello sviluppo backend, sia nella progettazione di
           API nella gestire database. Questo sito, infatti, è stato costruito
@@ -37,9 +43,9 @@ export default function Hero() {
             un'app full-stack
           </a>{" "}
           con PHP/Laravel.
-        </p>
+        </p> */}
         <p className={styles.content}>
-          Altri progetti sono qui sotto 👇. Sono sempre aperto a collaborazioni
+          I miei progetti sono qui sotto 👇. Sono sempre aperto a collaborazioni
           e nuove sfide. Sentiti libero di contattarmi—mi farebbe piacere
           connetterci!
         </p>
