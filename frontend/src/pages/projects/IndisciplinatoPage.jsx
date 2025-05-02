@@ -16,12 +16,10 @@ export default function IndisciplinatoPage() {
       <Nav />
       <SingleProjectLayout
         title={project.title}
+        descriptionLong={project.descriptionLong}
         badges={project.badges}
-        description={project.description}
         role={project.role}
         mainImg={project.mainImg}
-        features={project.features}
-        challenges={project.challenges}
       />
     </>
   );
