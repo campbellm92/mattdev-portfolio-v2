@@ -2,7 +2,7 @@ import styles from "./alt2.module.css";
 import projectData from "../../data/projectData.js";
 import { Button, Badge } from "mallee-ui";
 import { useState } from "react";
-// import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import useIsMobile from "../../hooks/useIsMobile.js";
 // import GitHubCalendar from "react-github-calendar";
 
@@ -74,16 +74,21 @@ export default function Projects() {
                         </Badge>
                       ))}
                     </div>
-                    <p className={styles.description}>{project.description}</p>
+                    <p className={styles.description}>
+                      {project.descriptionShort}
+                    </p>
                     <div className={styles.linkBtns}>
                       {statusLabel && (
                         <a href={project.href} className={styles.linkBtn}>
                           {statusLabel}
                         </a>
                       )}
-                      {/* <a href="" className={styles.linkBtn}>
+                      <Link
+                        to={`/projects/${project.id}`}
+                        className={styles.linkBtn}
+                      >
                         📓 Leggi di più
-                      </a> */}
+                      </Link>
                     </div>
                   </div>
                 </div>
