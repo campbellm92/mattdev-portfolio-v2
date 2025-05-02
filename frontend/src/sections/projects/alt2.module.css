@@ -89,5 +89,5 @@
 .projectImg {
   width: 95%;
   border-radius: 0.25rem;
-  box-shadow: 0.7rem 0.7rem var(--secondary);
+  box-shadow: 0.7rem 0.7rem var(--text-primary);
 }
