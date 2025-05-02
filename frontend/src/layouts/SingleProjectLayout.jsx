@@ -4,8 +4,8 @@ import { Badge } from "mallee-ui";
 
 export default function SingleProjectLayout({
   title,
-  descriptionLong,
   badges,
+  descriptionLong,
   role,
   mainImg,
   children,
@@ -21,16 +21,21 @@ export default function SingleProjectLayout({
             </Badge>
           ))}
         </div>
-        <p>{descriptionLong}</p>
-        <p>{children}</p>
-        <p>{role}</p>
+        <div className={styles.description}>
+          {descriptionLong.map((para, index) => (
+            <p key={index}>{para}</p>
+          ))}
+        </div>
       </div>
+
+      {children}
+      <p>{role}</p>
 
       <div className={styles.mainImgBackground}>
         <img src={mainImg} alt="Project main img" />
       </div>
 
-      <div className={styles.projectBody}>{children}</div>
+      {children}
     </>
   );
 }
