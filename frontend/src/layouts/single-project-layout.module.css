@@ -1,0 +1,12 @@
+.mainInfoContainer {
+  padding: 4rem;
+  margin-top: 8rem;
+}
+
+.badgesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  width: 100%;
+}
