@@ -9,9 +9,13 @@ const projectData = [
     id: "indisciplinato",
     href: "https://indisciplinato.it/",
     title: "Indisciplinato",
+    mainImg: indisciplinatoImage,
     descriptionShort:
       "Landing page per un evento per produttori di vino indipendenti",
-    mainImg: indisciplinatoImage,
+    descriptionLong: [
+      "Indisciplinato è un evento che mette in mostra i produttori di vino indipendenti e che si tiene ad Asti nel mese di giugno.",
+    ],
+    role: "Per questo progetto ho aiutato il team di Indisciplinato a fare i compontenti UI su misura con JavaScript, HTML e CSS",
     badges: [
       { children: "JavaScript", variant: "filled", color: "secondary" },
       { children: "HTML", variant: "filled", color: "secondary" },
@@ -19,6 +23,8 @@ const projectData = [
       { children: "Wordpress", variant: "filled", color: "secondary" },
       { children: "Elementor", variant: "filled", color: "secondary" },
     ],
+    features: [{ title: "blah", description: ["blah blah", "blah blah"] }],
+    challenges: [{ title: "blah", description: ["blah blah", "blah blah"] }],
     category: "professional",
     status: "live",
   },
@@ -26,9 +32,11 @@ const projectData = [
     id: "localis",
     href: "https://localis-capstone-f7a22eb1b92e.herokuapp.com/",
     title: "Localis Dashboard",
+    mainImg: localisImage,
     descriptionShort:
       "Progetto stage: Dashboard di visualizzazione dei dati per l'industria del turismo.",
-    mainImg: localisImage,
+    descriptionLong: [""],
+
     badges: [
       { children: "React", variant: "filled", color: "secondary" },
       { children: "Tailwind", variant: "filled", color: "secondary" },
@@ -39,6 +47,8 @@ const projectData = [
       { children: "MySQL", variant: "filled", color: "secondary" },
       { children: "JSON Web Tokens", variant: "filled", color: "secondary" },
     ],
+    features: [{ title: "blah", description: ["blah blah", "blah blah"] }],
+    challenges: [{ title: "blah", description: ["blah blah", "blah blah"] }],
     category: "professional",
     status: "live",
   },
@@ -46,9 +56,11 @@ const projectData = [
     id: "mallee",
     href: "https://github.com/campbellm92/mallee-ui",
     title: "Mallee-UI",
+    mainImg: malleeImage,
     descriptionShort:
       "La mia UI library, che sto costantemente aggiungendo e perfezionando. Questo sito è partialmente costruito con Mallee!",
-    mainImg: malleeImage,
+    descriptionLong: [""],
+
     badges: [
       { children: "TypeScript", variant: "filled", color: "secondary" },
       { children: "React", variant: "filled", color: "secondary" },
@@ -56,6 +68,8 @@ const projectData = [
       { children: "CSS Modules", variant: "filled", color: "secondary" },
       { children: "Storybook", variant: "filled", color: "secondary" },
     ],
+    features: [{ title: "blah", description: ["blah blah", "blah blah"] }],
+    challenges: [{ title: "blah", description: ["blah blah", "blah blah"] }],
     category: "passion",
     status: "in development",
   },
@@ -63,8 +77,10 @@ const projectData = [
     id: "curlew",
     href: "https://curlew.mattdev.it/",
     title: "Curlew",
-    descriptionShort: "Una piattaforma di markdown blogging minimalista.",
     mainImg: curlewImage,
+    descriptionShort: "Una piattaforma di markdown blogging minimalista.",
+    descriptionLong: [""],
+
     badges: [
       { children: "JavaScript", variant: "filled", color: "secondary" },
       { children: "Node", variant: "filled", color: "secondary" },
@@ -72,6 +88,8 @@ const projectData = [
       { children: "HTML", variant: "filled", color: "secondary" },
       { children: "Markdown", variant: "filled", color: "secondary" },
     ],
+    features: [{ title: "blah", description: ["blah blah", "blah blah"] }],
+    challenges: [{ title: "blah", description: ["blah blah", "blah blah"] }],
     category: "passion",
     status: "github",
   },
@@ -80,13 +98,17 @@ const projectData = [
     id: "tastrails",
     href: "https://campbellm92.github.io/alltrails-clone/",
     title: "TasTrails",
+    mainImg: tastrailsImage,
     descriptionShort:
       "Uno dei miei primi progetti: un clone di website di trekking Alltrails realizzato completamente con HTML e CSS.",
-    mainImg: tastrailsImage,
+    descriptionLong: [""],
+
     badges: [
       { children: "HTML", variant: "filled", color: "secondary" },
       { children: "CSS", variant: "filled", color: "secondary" },
     ],
+    features: [{ title: "blah", description: ["blah blah", "blah blah"] }],
+    challenges: [{ title: "blah", description: ["blah blah", "blah blah"] }],
     category: "passion",
     status: "live",
   },
