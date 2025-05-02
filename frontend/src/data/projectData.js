@@ -9,7 +9,7 @@ const projectData = [
     id: "indisciplinato",
     href: "https://indisciplinato.it/",
     title: "Indisciplinato",
-    description:
+    descriptionShort:
       "Landing page per un evento per produttori di vino indipendenti",
     mainImg: indisciplinatoImage,
     badges: [
@@ -26,7 +26,7 @@ const projectData = [
     id: "localis",
     href: "https://localis-capstone-f7a22eb1b92e.herokuapp.com/",
     title: "Localis Dashboard",
-    description:
+    descriptionShort:
       "Progetto stage: Dashboard di visualizzazione dei dati per l'industria del turismo.",
     mainImg: localisImage,
     badges: [
@@ -46,7 +46,7 @@ const projectData = [
     id: "mallee",
     href: "https://github.com/campbellm92/mallee-ui",
     title: "Mallee-UI",
-    description:
+    descriptionShort:
       "La mia UI library, che sto costantemente aggiungendo e perfezionando. Questo sito è partialmente costruito con Mallee!",
     mainImg: malleeImage,
     badges: [
@@ -63,7 +63,7 @@ const projectData = [
     id: "curlew",
     href: "https://curlew.mattdev.it/",
     title: "Curlew",
-    description: "Una piattaforma di markdown blogging minimalista.",
+    descriptionShort: "Una piattaforma di markdown blogging minimalista.",
     mainImg: curlewImage,
     badges: [
       { children: "JavaScript", variant: "filled", color: "secondary" },
@@ -80,7 +80,7 @@ const projectData = [
     id: "tastrails",
     href: "https://campbellm92.github.io/alltrails-clone/",
     title: "TasTrails",
-    description:
+    descriptionShort:
       "Uno dei miei primi progetti: un clone di website di trekking Alltrails realizzato completamente con HTML e CSS.",
     mainImg: tastrailsImage,
     badges: [
