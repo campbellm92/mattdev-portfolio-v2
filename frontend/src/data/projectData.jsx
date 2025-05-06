@@ -13,9 +13,22 @@ const projectData = [
     descriptionShort:
       "Landing page per un evento per produttori di vino indipendenti",
     descriptionLong: [
-      "Indisciplinato è un evento che mette in mostra i produttori di vino indipendenti e che si tiene ad Asti nel mese di giugno.",
+      <>
+        Indisciplinato è un evento che mette in mostra i produttori di vino
+        indipendenti e che si tiene ad Asti nel mese di giugno.
+      </>,
+      <>
+        Il sito è stato progettato da{" "}
+        <a href="https://www.linkedin.com/in/matteo-catalano-06696a180/">
+          Matteo Catalano
+        </a>{" "}
+        e costruito da noi con Wordpress/Elementor poi un po' di custom HTML,
+        CSS e JavaScript.
+      </>,
     ],
-    role: "Per questo progetto ho aiutato il team di Indisciplinato a fare i compontenti UI su misura con JavaScript, HTML e CSS",
+    role: [
+      "Ho sviluppato UI su misura per replicare alcune funzionalità avanzate normalmente disponibili solo con Elementor Pro, come animazioni dinamiche e interazioni personalizzate, riducendo la dipendenza da plugin a pagamento.",
+    ],
     badges: [
       { children: "JavaScript", variant: "filled", color: "secondary" },
       { children: "HTML", variant: "filled", color: "secondary" },
@@ -23,7 +36,13 @@ const projectData = [
       { children: "Wordpress", variant: "filled", color: "secondary" },
       { children: "Elementor", variant: "filled", color: "secondary" },
     ],
-    features: [{ title: "blah", description: ["blah blah", "blah blah"] }],
+    features: [
+      {
+        title: "blah",
+        description: ["blah blah", "blah blah"],
+        image: indisciplinatoImage,
+      },
+    ],
     challenges: [{ title: "blah", description: ["blah blah", "blah blah"] }],
     category: "professional",
     status: "live",
