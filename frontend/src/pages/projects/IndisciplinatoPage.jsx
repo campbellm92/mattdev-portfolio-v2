@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import projectData from "../../data/projectData.js";
+import projectData from "../../data/projectData.jsx";
 import Nav from "../../components/Navbar.jsx";
 import SingleProjectLayout from "../../layouts/SingleProjectLayout.jsx";
 
@@ -20,6 +20,7 @@ export default function IndisciplinatoPage() {
         badges={project.badges}
         role={project.role}
         mainImg={project.mainImg}
+        features={project.features}
       />
     </>
   );
