@@ -1,51 +1,50 @@
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--primary);
-    padding: 1.5rem;
-    width: 100%;
-    position: fixed;
-    top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary);
+  padding: 1.5rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
 }
 
 .rightNav {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .brandBgWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--secondary);
-    width: 3.5rem;
-    height: 3.5rem;
-    padding: 2rem;
-    border-radius: 0.15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--text-primary);
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 2rem;
+  border-radius: 0.15rem;
 }
 
 .brand {
-    color: oklch(0.95 0.01 260);
-    font-weight: 900;
-    font-size: var(--font-size-h1);
-    text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 900;
+  font-size: var(--font-size-h1);
+  text-decoration: none;
 }
 
-
 .darkModeIconBg {
-    display: flex;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: var(--background-opposite);
-    border-radius: 50%;
-    padding: 0.3rem;
+  display: flex;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--background-opposite);
+  border-radius: 50%;
+  padding: 0.3rem;
 }
 
 .darkModeIcons {
-    width: 100%;
-    height: 100%;
-    transition: all 1s ease;
+  width: 100%;
+  height: 100%;
+  transition: all 1s ease;
 }
