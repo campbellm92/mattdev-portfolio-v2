@@ -1,5 +1,5 @@
 import styles from "./alt2.module.css";
-import projectData from "../../data/projectData.js";
+import projectData from "../../data/projectData.jsx";
 import { Button, Badge } from "mallee-ui";
 import { useState } from "react";
 import { Link } from "react-router-dom";
