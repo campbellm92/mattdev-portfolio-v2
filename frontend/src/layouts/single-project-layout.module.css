@@ -1,5 +1,8 @@
+.singleProjectPage {
+  padding: 2rem;
+}
+
 .mainInfoContainer {
-  padding: 4rem;
   margin-top: 8rem;
 }
 
@@ -9,4 +12,17 @@
   gap: 0.5rem;
   margin-top: 0.75rem;
   width: 100%;
+}
+
+.roleContainer {
+  margin-top: 2rem;
+}
+
+.mainImgContainer {
+  margin-top: 2rem;
+}
+
+.mainImg {
+  max-width: 100%;
+  height: auto;
 }
