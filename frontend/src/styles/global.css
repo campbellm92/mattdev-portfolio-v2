@@ -118,13 +118,13 @@ li {
   font-size: var(--font-size-li);
 }
 
-a {
+.project-page-link {
   text-decoration: none;
   color: var(--primary);
   font-weight: 500;
 }
 
-a:hover {
+.project-page-link:hover {
   text-decoration: underline;
 }
 
