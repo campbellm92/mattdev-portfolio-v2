@@ -1,4 +1,4 @@
-import styles from "./alt2.module.css";
+import styles from "./projects.module.css";
 import projectData from "../../data/projectData.jsx";
 import { Button, Badge } from "mallee-ui";
 import { useState } from "react";
@@ -101,37 +101,6 @@ export default function Projects() {
                 </div>
               </div>
             </div>
-            // <div key={index} className={styles.projectCard}>
-            //   <div className={styles.imgBadgeContainer}>
-
-            //   </div>
-
-            //   <div className={styles.content}>
-            //     <h2 className={styles.projectTitle}>{project.title}</h2>
-
-            //     <div className={styles.badgeContainer}>
-            //       {project.badges.map((badge, badgeIndex) => (
-            //         <Badge
-            //           key={badgeIndex}
-            //           variant={badge.variant}
-            //           color={badge.color}
-            //         >
-            //           {badge.children.toUpperCase()}
-            //         </Badge>
-            //       ))}
-            //     </div>
-
-            //     <p className={styles.description}>{project.description}</p>
-
-            //     <div className={styles.statusBtns}>
-            //       {statusLabel && (
-            //         <a href={project.href} className={styles.statusTag}>
-            //           {statusLabel}
-            //         </a>
-            //       )}
-            //     </div>
-            //   </div>
-            // </div>
           );
         })}
       </div>
