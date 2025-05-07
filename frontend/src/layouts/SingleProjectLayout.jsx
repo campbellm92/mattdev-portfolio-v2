@@ -13,7 +13,7 @@ export default function SingleProjectLayout({
 }) {
   return (
     <div className={styles.singleProjectPage}>
-      <div className={styles.mainInfoContainer}>
+      <div className={styles.mainInfoSection}>
         <h1 className={styles.title}>{title}</h1>
         <div className={styles.badgesContainer}>
           {badges?.map((badge, index) => (
@@ -22,36 +22,52 @@ export default function SingleProjectLayout({
             </Badge>
           ))}
         </div>
+
         <div className={styles.description}>
           {descriptionLong.map((para, index) => (
             <p key={index}>{para}</p>
           ))}
         </div>
+
+        <div className={styles.roleContainer}>
+          <h3>Il mio ruolo</h3>
+          {role.map((para, index) => (
+            <p key={index}>{para}</p>
+          ))}
+        </div>
+
+        <div className={styles.mainImgContainer}>
+          <img
+            src={mainImg}
+            alt="Project main img"
+            className={styles.mainImg}
+          />
+        </div>
       </div>
 
-      {children}
-      <div className={styles.roleContainer}>
-        <h3>Il mio ruolo</h3>
-        {role.map((para, index) => (
-          <p key={index}>{para}</p>
+      <div className={styles.featuresSection}>
+        {features.map((feature, index) => (
+          <div key={index} className={styles.featuresContainer}>
+            <div>
+              <h3 className={styles.featureTitle}>{feature.title}</h3>
+              <div>
+                {feature.description.map((line, i) => (
+                  <p key={i}>{line}</p>
+                ))}
+              </div>
+              {Array.isArray(feature.images) &&
+                feature.images.map((img, index) => (
+                  <img
+                    key={index}
+                    src={img}
+                    alt={`${feature.title} - ${index}`}
+                    className={styles.featureImg}
+                  />
+                ))}
+            </div>
+          </div>
         ))}
       </div>
-
-      <div className={styles.mainImgContainer}>
-        <img src={mainImg} alt="Project main img" className={styles.mainImg} />
-      </div>
-
-      {features.map((feature, index) => (
-        <div key={index}>
-          <h3>{feature.title}</h3>
-          {feature.image && <img src={feature.image} alt={feature.title} />}
-          <ul>
-            {feature.description.map((line, i) => (
-              <li key={i}>{line}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
 
       {children}
     </div>
@@ -67,15 +83,15 @@ SingleProjectLayout.propTypes = {
       color: PropTypes.string,
     })
   ),
-  descriptionLong: PropTypes.string,
-  role: PropTypes.string,
-  mainImg: PropTypes.string,
+  descriptionLong: PropTypes.arrayOf(PropTypes.node).isRequired,
+  role: PropTypes.arrayOf(PropTypes.string).isRequired,
+  mainImg: PropTypes.string.isRequired,
   children: PropTypes.node,
   features: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       description: PropTypes.arrayOf(PropTypes.string).isRequired,
-      image: PropTypes.string, // optional
+      images: PropTypes.arrayOf(PropTypes.string).isRequired,
     })
   ).isRequired,
 };
