@@ -2,8 +2,9 @@
   padding: 2rem;
 }
 
-.mainInfoContainer {
+.mainInfoSection {
   margin-top: 8rem;
+  margin-bottom: 8rem;
 }
 
 .badgesContainer {
@@ -25,4 +26,13 @@
 .mainImg {
   max-width: 100%;
   height: auto;
+}
+
+.featureImgContainer {
+  display: flex;
+}
+
+.featureImg {
+  width: 100%;
+  margin-top: 2rem;
 }
