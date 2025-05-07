@@ -55,15 +55,18 @@ export default function SingleProjectLayout({
                   <p key={i}>{line}</p>
                 ))}
               </div>
-              {Array.isArray(feature.images) &&
-                feature.images.map((img, index) => (
-                  <img
-                    key={index}
-                    src={img}
-                    alt={`${feature.title} - ${index}`}
-                    className={styles.featureImg}
-                  />
-                ))}
+              <div className={styles.featureImgContainer}>
+                {Array.isArray(feature.images) &&
+                  feature.images.map((img, index) => (
+                    <div key={index}>
+                      <img
+                        src={img}
+                        alt={`${feature.title} - ${index}`}
+                        className={styles.featureImg}
+                      />
+                    </div>
+                  ))}
+              </div>
             </div>
           </div>
         ))}
