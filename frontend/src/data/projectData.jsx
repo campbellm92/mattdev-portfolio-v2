@@ -1,6 +1,8 @@
 import indisciplinatoImage from "../assets/project-images/indisciplinato.webp";
 import indisciplinatoMobMenu from "../assets/project-images/indisciplinato-mob-menu.webp";
 import indisciplinatoNav from "../assets/project-images/indisciplinato-nav.webp";
+import indisciplinatoProducersSection from "../assets/project-images/indisciplinato-producers-section.webp";
+import indisciplinatoButtonAnimation from "../assets/project-images/indisciplinato-button-animation.webp";
 import localisImage from "../assets/project-images/localis.webp";
 import malleeImage from "../assets/project-images/mallee.webp";
 import curlewImage from "../assets/project-images/curlew.webp";
@@ -13,7 +15,7 @@ const projectData = [
     title: "Indisciplinato",
     mainImg: indisciplinatoImage,
     descriptionShort:
-      "Landing page per un evento per produttori di vino indipendenti",
+      "Landing page per un evento per produttori di vino indipendenti.",
     descriptionLong: [
       <>
         Indisciplinato è un evento che mette in mostra i produttori di vino
@@ -45,14 +47,16 @@ const projectData = [
       {
         title: "Header responsive con interazione allo scroll",
         description: [
-          "Qui mi è stato chiesto di creare un header che cambia colore quando si scorre la pagina, una cosa non supportata dalla versione gratuita di Elementor. Ho usato il plugin Ultimate Addons e gli ho dato una grande iniezione di HTML, CSS e JavaScript.",
+          "Qui mi è stato chiesto di creare un header che cambia colore quando si scorre la pagina, una cosa non supportata dalla versione gratuita di Elementor. Ho usato il plugin Ultimate Addons e gli ho dato una grande iniezione di HTML, CSS e JavaScript. Naturalmente c'è anche il menu per mobile!",
         ],
         images: [indisciplinatoNav, indisciplinatoMobMenu],
       },
       {
-        title: "blah",
-        description: ["blah blah", "blah blah"],
-        image: indisciplinatoImage,
+        title: "Sezione produttori di vino con toggle e animazioni",
+        description: [
+          "Per questa sezione ho implementato un pulsante toggle per mostrare altri produttori di vino, ancora con HTML, CSS e JavaScript. Le card sono inizialmente nascoste nel DOM tramite JavaScript. Quando si clicca sul pulsante, appaiono con un'animazione aggiunta tramite Elementor.",
+        ],
+        images: [indisciplinatoProducersSection, indisciplinatoButtonAnimation],
       },
     ],
     challenges: [{ title: "blah", description: ["blah blah", "blah blah"] }],
