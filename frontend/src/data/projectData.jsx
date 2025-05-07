@@ -1,4 +1,6 @@
 import indisciplinatoImage from "../assets/project-images/indisciplinato.webp";
+import indisciplinatoMobMenu from "../assets/project-images/indisciplinato-mob-menu.webp";
+import indisciplinatoNav from "../assets/project-images/indisciplinato-nav.webp";
 import localisImage from "../assets/project-images/localis.webp";
 import malleeImage from "../assets/project-images/mallee.webp";
 import curlewImage from "../assets/project-images/curlew.webp";
@@ -19,7 +21,10 @@ const projectData = [
       </>,
       <>
         Il sito è stato progettato da{" "}
-        <a href="https://www.linkedin.com/in/matteo-catalano-06696a180/">
+        <a
+          href="https://www.linkedin.com/in/matteo-catalano-06696a180/"
+          className="project-page-link"
+        >
           Matteo Catalano
         </a>{" "}
         e costruito da noi con Wordpress/Elementor poi un po' di custom HTML,
@@ -37,6 +42,13 @@ const projectData = [
       { children: "Elementor", variant: "filled", color: "secondary" },
     ],
     features: [
+      {
+        title: "Header responsive con interazione allo scroll",
+        description: [
+          "Qui mi è stato chiesto di creare un header che cambia colore quando si scorre la pagina, una cosa non supportata dalla versione gratuita di Elementor. Ho usato il plugin Ultimate Addons e gli ho dato una grande iniezione di HTML, CSS e JavaScript.",
+        ],
+        images: [indisciplinatoNav, indisciplinatoMobMenu],
+      },
       {
         title: "blah",
         description: ["blah blah", "blah blah"],
