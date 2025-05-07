@@ -1,5 +1,5 @@
 .singleProjectPage {
-  padding: 2rem;
+  padding: 4rem;
 }
 
 .mainInfoSection {
@@ -30,9 +30,14 @@
 
 .featureImgContainer {
   display: flex;
+  width: 100%;
+  gap: 2rem;
+  margin-bottom: 4rem;
 }
 
 .featureImg {
-  width: 100%;
+  max-width: 45vw;
+  height: 37rem;
+  object-fit: contain;
   margin-top: 2rem;
 }
