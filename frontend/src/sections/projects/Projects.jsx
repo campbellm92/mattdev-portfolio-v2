@@ -1,10 +1,9 @@
 import styles from "./projects.module.css";
 import projectData from "../../data/projectData.jsx";
-import { Button, Badge } from "mallee-ui";
+import Button from "../../components/Button.jsx";
+import Badge from "../../components/Badge.jsx";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import useIsMobile from "../../hooks/useIsMobile.js";
-// import GitHubCalendar from "react-github-calendar";
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("professional");
@@ -23,8 +22,6 @@ export default function Projects() {
     return null;
   };
 
-  const isMobile = useIsMobile();
-
   return (
     <div className={styles.projectsSection}>
       <div className="sectionTitle">
@@ -34,20 +31,10 @@ export default function Projects() {
       {/* Toggle buttons */}
       <div className={styles.selectBtnsWrapper}>
         <div className={styles.selectBtns}>
-          <Button
-            variant={selectedCategory === "professional" ? "filled" : "outline"}
-            size={isMobile ? "medium" : "large"}
-            className={styles.buttonCustom}
-            onClick={() => setSelectedCategory("professional")}
-          >
+          <Button onClick={() => setSelectedCategory("professional")}>
             PROFESSIONALI
           </Button>
-          <Button
-            variant={selectedCategory === "passion" ? "filled" : "outline"}
-            size={isMobile ? "medium" : "large"}
-            className={styles.buttonCustom}
-            onClick={() => setSelectedCategory("passion")}
-          >
+          <Button onClick={() => setSelectedCategory("passion")}>
             DI PASSIONE
           </Button>
         </div>
@@ -65,11 +52,7 @@ export default function Projects() {
                     <h2 className={styles.projectTitle}>{project.title}</h2>
                     <div className={styles.badgesContainer}>
                       {project.badges.map((badge, badgeIndex) => (
-                        <Badge
-                          key={badgeIndex}
-                          variant={badge.variant}
-                          color={badge.color}
-                        >
+                        <Badge key={badgeIndex}>
                           {badge.children.toUpperCase()}
                         </Badge>
                       ))}
@@ -80,14 +63,11 @@ export default function Projects() {
                     <div className={styles.linkBtns}>
                       {statusLabel && (
                         <a href={project.href} className={styles.linkBtn}>
-                          {statusLabel}
+                          <Button>{statusLabel}</Button>
                         </a>
                       )}
-                      <Link
-                        to={`/projects/${project.id}`}
-                        className={styles.linkBtn}
-                      >
-                        📓 Leggi di più
+                      <Link to={`/projects/${project.id}`}>
+                        <Button>Leggi di più</Button>
                       </Link>
                     </div>
                   </div>
