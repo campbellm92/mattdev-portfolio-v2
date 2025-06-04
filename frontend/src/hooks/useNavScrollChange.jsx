@@ -3,17 +3,29 @@ import { useEffect } from "react";
 export default function useNavScrollChange() {
   useEffect(() => {
     const mainNav = document.getElementById("main-nav");
+    const logo = document.getElementById("logo");
 
     const changeStyleOnScroll = () => {
-      if (
-        document.body.scrollTop > 80 ||
-        document.documentElement.scrollTop > 80
-      ) {
-        mainNav.style.cssText =
-          "padding: 1rem; background-color: var(--primary-nav-scrolled); transition: all 1s ease; ";
-      } else {
-        mainNav.style.cssText =
-          "padding: 1.5rem; background-color: var(--primary); transition: all 1s ease;";
+      const scrolled =
+        document.body.scrollTop > 80 || document.documentElement.scrollTop > 80;
+
+      mainNav.style.cssText = `
+        padding: ${scrolled ? "1rem" : "1.5rem"};
+        background-color: ${
+          scrolled ? "var(--primary-nav-scrolled)" : "transparent"
+        };
+        transition: all 1s ease;
+      `;
+
+      const newText = scrolled ? "MC" : "Matt Campbell";
+      if (logo.innerText !== newText) {
+        logo.style.opacity = "0";
+
+        setTimeout(() => {
+          logo.innerText = newText;
+          logo.style.transition = "opacity 1s ease";
+          logo.style.opacity = "1";
+        }, 300);
       }
     };
     window.addEventListener("scroll", changeStyleOnScroll);
