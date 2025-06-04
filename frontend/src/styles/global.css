@@ -3,20 +3,20 @@
 
 :root {
   /* Colour */
-  --primary: oklch(50% 0.134 242.749);
-  --primary-hover: oklch(50% 0.134 242.749 / 0.9);
-  --primary-nav-scrolled: oklch(50% 0.134 242.749 / 0.4);
-  --secondary: oklch(59.2% 0.249 0.584);
-  --secondary-hover: oklch(59.2% 0.249 0.584 / 0.9);
-  --neutral: oklch(0.9 0.01 260);
-  --neutral-hover: oklch(0.9 0.01 260 / 0.9);
-  --neutral-darker: oklch(0.54 0.01 260);
-  --neutral-darker-hover: oklch(0.54 0.01 260 / 0.9);
-  --neutral-darkest: oklch(0.21 0.01 260);
-  --text-primary: oklch(0.26 0.01 270);
-  --text-secondary: oklch(0.95 0.01 260);
-  --background: oklch(0.95 0.01 260);
-  --background-opposite: oklch(0.26 0.01 270);
+  /* Colours taken from Tailwind V4 */
+  --zinc-50: oklch(98.5% 0 0);
+  --zinc-100: oklch(96.7% 0.001 286.375);
+  --zinc-300: oklch(87.1% 0.006 286.286);
+  --zinc-400: oklch(70.5% 0.015 286.067);
+  --zinc-500: oklch(55.2% 0.016 285.938);
+  --zinc-600: oklch(44.2% 0.017 285.786);
+  --zinc-700: oklch(37% 0.013 285.805);
+
+  /* light theme */
+  --text: var(--zinc-700);
+  --text-hover: var(--zinc-600);
+  --background: var(--zinc-100);
+  --offset: var(--zinc-300);
   --info: oklch(0.73 0.23 240);
   --info-hover: oklch(0.73 0.23 240 / 0.9);
   --success: oklch(0.72 0.23 145);
@@ -41,26 +41,10 @@
 }
 
 [data-theme="dark"] {
-  --primary: oklch(50% 0.134 242.749);
-  --primary-hover: oklch(50% 0.134 242.749 / 0.9);
-  --secondary: oklch(59.2% 0.249 0.584);
-  --secondary-hover: oklch(59.2% 0.249 0.584 / 0.9);
-  --neutral: oklch(0.9 0.01 260);
-  --neutral-hover: oklch(0.9 0.01 260 / 0.9);
-  --neutral-darker: oklch(0.54 0.01 260);
-  --neutral-darker-hover: oklch(0.54 0.01 260 / 0.9);
-  --text-primary: oklch(0.95 0.01 260);
-  --text-secondary: oklch(0.26 0.01 270);
-  --background: oklch(0.26 0.01 270);
-  --background-opposite: oklch(0.95 0.01 260);
-  --info: oklch(0.73 0.23 240);
-  --info-hover: oklch(0.73 0.23 240 / 0.9);
-  --success: oklch(0.72 0.23 145);
-  --success-hover: oklch(0.72 0.23 145 / 0.9);
-  --warning: oklch(0.87 0.23 95);
-  --warning-hover: oklch(0.87 0.23 95 / 0.9);
-  --error: oklch(0.7 0.25 20);
-  --error-hover: oklch(0.7 0.25 20 / 0.9);
+  --text: var(--zinc-100);
+  --text-hover: var(--zinc-50);
+  --background: var(--zinc-700);
+  --offset: var(--zinc-500);
 }
 
 * {
@@ -82,45 +66,53 @@ body {
 
 p {
   font-size: var(--font-size-base);
+  color: var(--text);
 }
 
 h1 {
   font-size: var(--font-size-h1);
   margin: 0;
+  color: var(--text);
 }
 
 h2 {
   font-size: var(--font-size-h2);
   margin: 0;
+  color: var(--text);
 }
 
 h3 {
   font-size: var(--font-size-h3);
   margin: 0;
+  color: var(--text);
 }
 
 h4 {
   font-size: var(--font-size-h4);
   margin: 0;
+  color: var(--text);
 }
 
 h5 {
   font-size: var(--font-size-h5);
   margin: 0;
+  color: var(--text);
 }
 
 h6 {
   font-size: var(--font-size-h6);
   margin: 0;
+  color: var(--text);
 }
 
 li {
   font-size: var(--font-size-li);
+  color: var(--text);
 }
 
 .project-page-link {
   text-decoration: none;
-  color: var(--primary);
+  color: var(--text);
   font-weight: 500;
 }
 
@@ -131,51 +123,37 @@ li {
 small,
 .small-text {
   font-size: var(--font-size-small);
-}
-
-hr {
-  width: 90%;
-  border: 0.25rem dashed var(--primary);
+  color: var(--text);
 }
 
 label {
   font-size: var(--font-size-base);
-  color: var(--text-primary);
+  color: var(--text);
   font-weight: 500;
 }
 
-input {
-  font-size: var(--font-size-base);
-  color: oklch(0.26 0.01 270);
-  padding: 0.5rem;
-  outline: none;
-  border: 0.125rem solid var(--primary);
-  border-radius: 0.25rem;
-}
-
-input::placeholder {
-  color: var(--neutral-darker);
-}
-
-input:focus {
-  color: oklch(0.26 0.01 270);
-  border-color: var(--primary);
-  box-shadow: 0.3rem 0.3rem var(--primary-hover);
-}
-
+input,
 textarea {
-  height: 8rem;
   font-size: var(--font-size-base);
+  color: var(--text);
+  background-color: var(--background);
   padding: 0.5rem;
-  outline: none;
-  border: 0.125rem solid var(--primary);
+  border: 0.125rem solid var(--zinc-400);
   border-radius: 0.25rem;
 }
 
+input::placeholder,
+textarea::placeholder {
+  color: var(--zinc-500);
+  opacity: 0.8;
+}
+
+input:focus,
 textarea:focus {
-  color: oklch(0.26 0.01 270);
-  border-color: var(--primary);
-  box-shadow: 0.3rem 0.3rem var(--primary-hover);
+  border-color: var(--zinc-600);
+  outline: none;
+  background-color: var(--background);
+  color: var(--text);
 }
 
 .input-error {
@@ -206,7 +184,6 @@ textarea:focus {
 
 .sectionTitle h1 {
   display: inline-block;
-  color: var(--text-primary);
 }
 
 img {
