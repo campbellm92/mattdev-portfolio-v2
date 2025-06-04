@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./contact.module.css";
-import { Button } from "mallee-ui";
+import Button from "../../components/Button";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -123,9 +123,7 @@ export default function ContactForm() {
         </div>
 
         <div className={styles.btnContainer}>
-          <Button size="large" type="submit" className={styles.buttonCustom}>
-            INVIARE
-          </Button>
+          <Button type="submit">INVIARE</Button>
         </div>
         <div className={styles.successMsgContainer}>
           {success && (

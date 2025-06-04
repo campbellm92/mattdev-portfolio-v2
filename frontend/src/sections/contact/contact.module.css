@@ -4,10 +4,6 @@
   padding-top: 4rem;
 }
 
-.header {
-  color: var(--text-primary);
-}
-
 /* Contact.jsx */
 .contactSection {
   display: grid;
@@ -47,7 +43,7 @@
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.5;
-  color: var(--primary);
+  color: var(--text);
 }
 
 .detail svg {
@@ -63,9 +59,8 @@
 .FaLinkedIn {
   font-size: 3.75rem;
   margin-right: 3rem;
-  color: var(--text-primary)
+  color: var(--text);
 }
-
 
 /* ContactForm.jsx */
 
@@ -80,16 +75,15 @@
   width: 100%;
   max-width: 25rem;
   height: auto;
-  border: 3px solid var(--primary);
+  border: 3px solid var(--text);
   padding: 2rem;
   border-radius: 0.25rem;
   background-color: inherit;
 }
 
-
 .contactHeader {
   padding-bottom: 1rem;
-  color: var(--text-primary);
+  color: var(--text);
 }
 
 .labelInputContainer {
@@ -98,7 +92,6 @@
   gap: 0.5rem;
   margin-bottom: 1rem;
 }
-
 
 .btnContainer {
   display: flex;
@@ -148,7 +141,7 @@
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.5;
-    color: var(--primary);
+    color: var(--text);
   }
 
   .contactFormContainer {
