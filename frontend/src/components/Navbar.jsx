@@ -26,11 +26,9 @@ export default function Navbar() {
   return (
     <>
       <nav id="main-nav">
-        <div className={styles.brandBgWrapper}>
-          <a href="/" className={styles.brand}>
-            MC
-          </a>
-        </div>
+        <a href="/" className={styles.logo} id="logo">
+          Matt Campbell
+        </a>
 
         <div className={styles.rightNav}>
           <div>
@@ -38,11 +36,10 @@ export default function Navbar() {
               {theme === "dark" ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  fill="var(--secondary)"
+                  fill="var(--text-primary)"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
-                  stroke="var(--text-secondary)"
-                  className={styles.darkModeIcon}
+                  stroke="var(--text-primary)"
                 >
                   <path
                     strokeLinecap="round"
@@ -53,10 +50,10 @@ export default function Navbar() {
               ) : (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  fill="var(--secondary)"
+                  fill="var(--text-primary)"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
-                  stroke="var(--text-secondary)"
+                  stroke="var(--text-primary)"
                   className={styles.darkModeIcons}
                 >
                   <path
