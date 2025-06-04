@@ -42,6 +42,7 @@ export default function Navbar() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="var(--text)"
+                  className={styles.darkModeIcons}
                 >
                   <path
                     strokeLinecap="round"
