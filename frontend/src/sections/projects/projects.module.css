@@ -1,3 +1,7 @@
+.projectsSection {
+  background-color: var(--background-opposite);
+}
+
 .selectBtns {
   display: flex;
   flex-direction: row;
@@ -20,6 +24,10 @@
   font-weight: bolder;
 }
 
+.title {
+  color: var(--text-secondary);
+}
+
 .projectCardsWrapper {
   display: flex;
   flex-direction: column;
@@ -31,7 +39,6 @@
 .projectBgContainer {
   width: 90%;
   height: 66%;
-  background-color: var(--primary);
   border-radius: 0.25rem;
   margin-bottom: 4rem;
 }
@@ -39,7 +46,7 @@
 .cardInner {
   display: flex;
   padding: 2rem;
-  color: oklch(0.95 0.01 260);
+  color: var(--text-secondary);
 }
 
 .badgesContainer {

@@ -26,9 +26,9 @@ export default function Projects() {
   const isMobile = useIsMobile();
 
   return (
-    <div id="projectsSection">
+    <div className={styles.projectsSection}>
       <div className="sectionTitle">
-        <h1>Progetti</h1>
+        <h1 className={styles.title}>Progetti</h1>
       </div>
 
       {/* Toggle buttons */}
