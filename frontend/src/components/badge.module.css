@@ -1,6 +1,6 @@
 .badge {
-  color: var(--text);
-  background-color: var(--background);
+  color: oklch(96.7% 0.001 286.375);
+  background-color: oklch(37% 0.013 285.805);
   padding: 0.25rem;
   border-radius: 0.25rem;
   font-weight: 500;
