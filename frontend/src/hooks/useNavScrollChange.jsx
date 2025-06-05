@@ -11,9 +11,6 @@ export default function useNavScrollChange() {
 
       mainNav.style.cssText = `
         padding: ${scrolled ? "1rem" : "1.5rem"};
-        background-color: ${
-          scrolled ? "var(--primary-nav-scrolled)" : "transparent"
-        };
         transition: all 1s ease;
       `;
 
