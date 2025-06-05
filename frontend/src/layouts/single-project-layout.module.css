@@ -1,10 +1,11 @@
 .singleProjectPage {
   padding: 4rem;
+  color: var(--text);
 }
 
 .mainInfoSection {
   margin-top: 8rem;
-  margin-bottom: 8rem;
+  margin-bottom: 2rem;
 }
 
 .badgesContainer {
@@ -19,6 +20,9 @@
   margin-top: 2rem;
 }
 
+.roleHeader {
+}
+
 .mainImgContainer {
   margin-top: 2rem;
 }
@@ -26,18 +30,35 @@
 .mainImg {
   max-width: 100%;
   height: auto;
+  border: 0.25rem solid var(--text);
 }
 
 .featureImgContainer {
   display: flex;
+  flex-direction: row;
   width: 100%;
   gap: 2rem;
-  margin-bottom: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
 }
 
 .featureImg {
-  max-width: 45vw;
-  height: 37rem;
+  width: calc(50% - 1rem);
   object-fit: contain;
-  margin-top: 2rem;
+  border: 0.25rem solid var(--text);
+}
+
+@media (max-width: 900px) {
+  .featureImgContainer {
+    flex-direction: column;
+  }
+  .featureImg {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .singleProjectPage {
+    padding: 2rem;
+  }
 }
