@@ -23,18 +23,22 @@ export default function SingleProjectLayout({
           ))}
         </div>
 
-        <div className={styles.description}>
-          {descriptionLong.map((para, index) => (
-            <p key={index}>{para}</p>
-          ))}
-        </div>
+        {descriptionLong?.length > 0 && (
+          <div className={styles.description}>
+            {descriptionLong.map((para, index) => (
+              <p key={index}>{para}</p>
+            ))}
+          </div>
+        )}
 
-        <div className={styles.roleContainer}>
-          <h3 className={styles.roleHeader}>Il mio ruolo</h3>
-          {role.map((para, index) => (
-            <p key={index}>{para}</p>
-          ))}
-        </div>
+        {role?.length > 0 && (
+          <div className={styles.roleContainer}>
+            <h3 className={styles.roleHeader}>Il mio ruolo</h3>
+            {role.map((para, index) => (
+              <p key={index}>{para}</p>
+            ))}
+          </div>
+        )}
 
         <div className={styles.mainImgContainer}>
           <img
@@ -45,31 +49,33 @@ export default function SingleProjectLayout({
         </div>
       </div>
 
-      <div className={styles.featuresSection}>
-        {features.map((feature, index) => (
-          <div key={index} className={styles.featuresContainer}>
-            <div>
-              <h3 className={styles.featureTitle}>{feature.title}</h3>
+      {features?.length > 0 && (
+        <div className={styles.featuresSection}>
+          {features.map((feature, index) => (
+            <div key={index} className={styles.featuresContainer}>
               <div>
-                {feature.description.map((line, i) => (
-                  <p key={i}>{line}</p>
-                ))}
-              </div>
-              <div className={styles.featureImgContainer}>
-                {Array.isArray(feature.images) &&
-                  feature.images.map((img, index) => (
-                    <img
-                      key={index}
-                      src={img}
-                      alt={`${feature.title} - ${index}`}
-                      className={styles.featureImg}
-                    />
+                <h3 className={styles.featureTitle}>{feature.title}</h3>
+                <div>
+                  {feature.description.map((line, i) => (
+                    <p key={i}>{line}</p>
                   ))}
+                </div>
+                <div className={styles.featureImgContainer}>
+                  {Array.isArray(feature.images) &&
+                    feature.images.map((img, index) => (
+                      <img
+                        key={index}
+                        src={img}
+                        alt={`${feature.title} - ${index}`}
+                        className={styles.featureImg}
+                      />
+                    ))}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
 
       {children}
     </div>
@@ -95,5 +101,5 @@ SingleProjectLayout.propTypes = {
       description: PropTypes.arrayOf(PropTypes.string).isRequired,
       images: PropTypes.arrayOf(PropTypes.string).isRequired,
     })
-  ).isRequired,
+  ),
 };
