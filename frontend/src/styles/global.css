@@ -212,3 +212,11 @@ button {
   transition: background-color 0.7s ease, color 0.7s ease,
     border-color 0.7s ease;
 }
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 2rem;
+  }
+}
