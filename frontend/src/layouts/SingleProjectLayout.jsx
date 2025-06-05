@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import styles from "./single-project-layout.module.css";
-import { Badge } from "mallee-ui";
+import Badge from "../components/Badge";
 
 export default function SingleProjectLayout({
   title,
@@ -30,7 +30,7 @@ export default function SingleProjectLayout({
         </div>
 
         <div className={styles.roleContainer}>
-          <h3>Il mio ruolo</h3>
+          <h3 className={styles.roleHeader}>Il mio ruolo</h3>
           {role.map((para, index) => (
             <p key={index}>{para}</p>
           ))}
@@ -58,13 +58,12 @@ export default function SingleProjectLayout({
               <div className={styles.featureImgContainer}>
                 {Array.isArray(feature.images) &&
                   feature.images.map((img, index) => (
-                    <div key={index}>
-                      <img
-                        src={img}
-                        alt={`${feature.title} - ${index}`}
-                        className={styles.featureImg}
-                      />
-                    </div>
+                    <img
+                      key={index}
+                      src={img}
+                      alt={`${feature.title} - ${index}`}
+                      className={styles.featureImg}
+                    />
                   ))}
               </div>
             </div>
