@@ -15,13 +15,12 @@ export default function Hero() {
           <span className={styles.heroSpan}>Asti 🍷</span> con mia moglie.
         </p>
         <p className={styles.content}>
-          Il mio interesse per lo sviluppo è nato durante la mia carriera come
-          insegnante di inglese e ho scoperto rapidamente una passione per la
-          creazione di applicazioni full-stack.
+          Sviluppo siti WordPress per organizzazioni e aziende locali e browser
+          game per studenti di inglese in React.
         </p>
         <p className={styles.content}>
-          Sto sempre lavorando a qualcosa, attualmente il sito web per un
-          colletivo artitistico locale.
+          Sto sempre lavorando a qualcosa, attualmente il sito web per uno
+          spazio d'arte ad Asti.
         </p>
         {/* <p className={styles.content}>
           Mi piace lavorare con architetture frontend su componenti, ma sono
