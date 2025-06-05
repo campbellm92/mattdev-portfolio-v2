@@ -13,13 +13,6 @@
   margin-bottom: 2rem;
 }
 
-@media (max-width: 480px) {
-  .selectBtns {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
 .buttonCustom {
   color: var(--text);
   font-weight: bolder;
@@ -67,13 +60,6 @@
   gap: 1rem;
 }
 
-@media (max-width: 480px) {
-  .linkBtns {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
 .projectImgContainer {
   display: flex;
   justify-content: center;
@@ -83,4 +69,21 @@
   width: 95%;
   border-radius: 0.25rem;
   box-shadow: 0.7rem 0.7rem var(--text);
+}
+
+@media (max-width: 480px) {
+  .linkBtns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .selectBtns {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+  }
+
+  .cardInner {
+    padding: 0.5rem;
+  }
 }
