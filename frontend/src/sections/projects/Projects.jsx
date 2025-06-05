@@ -66,9 +66,11 @@ export default function Projects() {
                           <Button>{statusLabel}</Button>
                         </a>
                       )}
-                      <Link to={`/projects/${project.id}`}>
-                        <Button>Leggi di più</Button>
-                      </Link>
+                      {project.hasDetails && (
+                        <Link to={`/projects/${project.id}`}>
+                          <Button>Leggi di più</Button>
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>
