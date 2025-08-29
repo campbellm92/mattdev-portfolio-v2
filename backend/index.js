@@ -9,9 +9,6 @@ const app = express();
 const MYGMAIL = process.env.EMAIL;
 const PASS = process.env.PASS;
 
-// console.log(MYGMAIL);
-// console.log(PASS);
-
 app.use(express.static(path.join(__dirname, "../frontend/dist")));
 app.use(express.json());
 app.use(
