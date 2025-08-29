@@ -5,12 +5,18 @@
 }
 
 /* Contact.jsx */
-.contactSection {
+/* .contactSection {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   height: 100vh;
   margin-top: 4rem;
+} */
+
+.contactSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Details Column */
@@ -21,6 +27,7 @@
   align-items: center;
   gap: 3rem;
   padding-bottom: 2rem;
+  margin-top: 4rem;
 }
 
 .detail {
